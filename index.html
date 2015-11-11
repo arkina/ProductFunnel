@@ -863,12 +863,13 @@ $(function () {
   
   $('[data-toggle="tooltip"]').tooltip();
 
-  $('ul.tabs li.current').on('click', function (e) {
-  e.preventDefault();
+  $('ul.tabs li.current').on('click', function () {
+  return false;
 });
 
 
-  $('ul.tabs li').click(function () {
+  $('ul.tabs li').click(function (e) {
+    e.preventDefault();
         $('.tab-content').velocity({opacity: "0"}, 10);
 
     var tab_id = $(this).attr('data-tab');
