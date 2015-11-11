@@ -558,6 +558,7 @@ mask-image: url(arrowhead-img.png);
 
 #funnel{
   z-index: 1;
+  pointer: cursor;
 
 }
 
@@ -862,6 +863,9 @@ $(function () {
   
   $('[data-toggle="tooltip"]').tooltip();
 
+  $('ul.tabs li.current').on('click', function (e) {
+  e.preventDefault();
+});
 
 
   $('ul.tabs li').click(function () {
