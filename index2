@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<!-- saved from url=(0072)file:///Users/maryasmirnova/Desktop/Product%20Launch%20Funnel/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="android-mobile-web-app-capable" content="yes">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Product Launch Funnel</title> 
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+<style> 
+
+body {
+  font-size: 100%;
+  font-family: "Open Sans", sans-serif;
+  color: white;
+  background-color: rgb(13, 75, 118);
+
+}
+
+a {
+  color: #acb7c0;
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+}
+
+.tabs{
+
+    position: absolute;
+    left: -40px;
+    top: -20px;
+
+      -ms-transform: scale(1,1); /* IE 9 */
+    -webkit-transform: scale(1,1); /* Safari */
+    transform: scale(1,1);
+
+
+    -webkit-transition: all 250ms ease;
+  -moz-transition: all 250ms ease;
+  -o-transition: all 250ms ease;
+  transition: all 250ms ease;
+}
+li{
+  text-decoration: none;
+  list-style: none;
+  padding: 0em;
+}
+
+ul{ 
+  padding-top: 2em;
+  list-style: none;
+ margin:0;
+
+}
+ul.tabs li{
+  opacity: 0;
+}
+
+ul.tabs li.current{
+background-color: #053C58;
+}
+
+
+
+/* Container box to set the sides relative to */
+.cube{
+  width: 400px;
+  height: 100px;
+  -webkit-transition: all 250ms ease;
+  -moz-transition: all 250ms ease;
+  -o-transition: all 250ms ease;
+  transition: all 250ms ease;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+/* The two faces of the cube */
+.default-state,
+.active-state {
+  height: 100px;
+
+}
+/* Position the faces */
+.default-state {
+  -webkit-transform: translateZ(50px);
+  -moz-transform: translateZ(50px);
+  -o-transform: translateZ(50px);
+  -ms-transform: translateZ(50px);
+  transform: translateZ(50px);
+}
+.flip-to-top .active-state {
+  -webkit-transform: rotateX(90deg) translateZ(150px);
+  -moz-transform: rotateX(90deg) translateZ(150px);
+  -o-transform: rotateX(90deg) translateZ(150px);
+  -ms-transform: rotateX(90deg) translateZ(150px);
+  transform: rotateX(90deg) translateZ(150px);
+}
+/* Rotate the cube */
+.cube:hover.flip-to-top{
+  -webkit-transform: rotateX(-90deg);
+  -moz-transform: rotateX(-90deg);
+  -o-transform: rotateX(-90deg);
+  -ms-transform: rotateX(-90deg);
+  transform: rotateX(-90deg);
+}
+
+.cube{
+  text-align: center;
+  margin: 0 auto;
+}
+.default-state{
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #fff;
+  padding-top: 1em;
+  margin-left: -10px;
+    -webkit-transition: background 250ms ease;
+  -moz-transition: background 250ms ease;
+  -o-transition: background 250ms ease;
+  transition: background 250ms ease;
+
+}
+
+
+.active-state {
+
+  background: #053C58;
+  font-size: 12px;
+  color: #fff;
+  padding-top: 2em;
+  margin-left: -10px;
+  -webkit-transition: background 250ms ease;
+  -moz-transition: background 250ms ease;
+  -o-transition: background 250ms ease;
+  transition: background 250ms ease;
+}
+.1.default-state {
+   background-color: #52BAAC;
+
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #fff;
+  padding-top: 1em;
+  margin-left: -10px;
+
+}
+.active-state {
+  background: #053C58;
+}
+.2.default-state {
+   background-color: red;
+
+}
+.3.default-state {
+   background-color: black;
+
+}
+.4.default-state {
+   background-color: blue;
+
+}
+.5.default-state {
+   background-color: orange;
+ 
+}
+.tab-content{
+    display: none;
+    padding: 2em;
+}
+
+.tab-content.current{
+  display: block;
+}
+
+
+.video3
+{
+  background-image : url(video3.png);
+  background-repeat : no-repeat;
+  position : absolute;
+  left : 525px;
+  top : 311px;
+  width : 121px;
+  height : 39px;
+  opacity: 0;
+}
+.video2
+{
+  background-image : url(video2.png);
+  background-repeat : no-repeat;
+  position : absolute;
+  left : 525px;
+  top : 226px;
+  width : 121px;
+  height : 38px;
+  opacity: 0;
+}
+.video1
+{
+  background-image : url(video1.png);
+  background-repeat : no-repeat;
+  position : absolute;
+  left : 525px;
+  top : 133px;
+  width : 121px;
+  height : 38px;
+  opacity: 0;
+}
+.vid2-arrow
+{
+  background-image : url(vid2-arrow.png);
+  background-repeat : no-repeat;
+  position : absolute;
+    left: 363px;
+    top: 235px;
+    width: 126px;
+    height: 20px;
+    opacity: 0;
+}
+.thankyou-arrow
+{
+  background-image : url(thankyou-arrow.png);
+  background-repeat : no-repeat;
+  position : absolute;
+    left: 195px;
+    top: 481px;
+    width: 277px;
+    height: 62px;
+    opacity: 0;
+
+}
+.video2-funnel
+{
+
+  background-color: #008BBC;
+-webkit-mask-image: url(vid2.svg);
+mask-image: url(vid2.svg);
+
+  position : relative;
+/*  left : 74px;
+  top : 278px;*/
+  width : 400px;
+  height : 100px;
+}
+.day9-text
+{
+  background-image : url(day9-text.png);
+  background-repeat : no-repeat;
+  position : absolute;
+  left : 482px;
+  top : 362px;
+  width : 36px;
+  height : 30px;
+  opacity: 0;
+}
+.video1-funnel
+{
+   background-color:  #319FDD;
+-webkit-mask-image: url(vid1.svg);
+mask-image: url(vid1.svg);
+  position : relative;
+
+/*  top : 278px;*/
+  width : 400px;
+  height : 100px;
+}
+.video3-funnel
+{
+   background-color:  #046D9B;
+-webkit-mask-image: url(vid3.svg);
+mask-image: url(vid3.svg);
+  position : relative;
+/*  left : 74px;
+  top : 278px;*/
+  width : 400px;
+  height : 100px;
+}
+.vertical-line
+{
+  border-left: 2px dotted white;
+  position : absolute;
+  left : 550px;
+  top : 53px;
+  width : 28px;
+  opacity: 0;
+}
+.vertical-arrow
+{
+  background-color: white;
+
+-webkit-mask-image: url(arrowhead.svg);
+mask-image: url(arrowhead.svg);
+  position : absolute;
+  left : 537px;
+  top : 53px;
+  width : 28px;
+  height : 18px;
+  opacity: 0;
+}
+.day3-text
+{
+  background-image : url(day3-text.png);
+  background-repeat : no-repeat;
+  position : absolute;
+  left : 482px;
+  top : 182px;
+  width : 36px;
+  height : 30px;
+  opacity: 0;
+}
+.optin-funnel
+{
+
+
+background-color: #52BAAC;
+-webkit-mask-image: url(optin.svg);
+mask-image: url(optin.svg);
+  position : relative;
+  width : 399px;
+  height : 100px;
+}
+.thank_you-badge
+{
+  background-image : url(thank_you-badge.png);
+  background-repeat : no-repeat;
+  position : absolute;
+  left : 487px;
+  top : 513px;
+  width : 31px;
+  height : 32px;
+  opacity: 0;
+}
+.day6-text
+{
+  background-image : url(day6-text.png);
+  background-repeat : no-repeat;
+  position : absolute;
+  left : 482px;
+  top : 272px;
+  width : 36px;
+  height : 30px;
+  opacity: 0;
+}
+.optin_form
+{
+  background-image : url(optin_form.png);
+  background-repeat : no-repeat;
+  position : absolute;
+  left : 530px;
+  top : 28px;
+  width : 121px;
+  height : 38px;
+  opacity: 0;
+}
+.cart-arrow
+{
+  background-image : url(cart-arrow.png);
+  background-repeat : no-repeat;
+  position : absolute;
+  left : 263px;
+  top : 532px;
+  width : 106px;
+  height : 23px;
+  opacity: 0;
+}
+.vid1-arrow
+{
+  background-image : url(vid1-arrow.png);
+  background-repeat : no-repeat;
+  position : absolute;
+    left: 381px;
+    top: 142px;
+    width: 106px;
+    height: 19px;
+    opacity: 0;
+
+}
+.optin-badge
+{
+  background-image : url(optin-badge.png);
+  background-repeat : no-repeat;
+  position : absolute;
+  left : 478px;
+  top : 25px;
+  width : 46px;
+  height : 46px;
+  opacity: 0;
+}
+.optin-arrow
+{
+  background-image : url(optin-arrow.png);
+  background-repeat : no-repeat;
+  position : absolute;
+  left : 323px;
+  top : 34px;
+  width : 146px;
+  height : 28px;
+  opacity: 0;
+}
+.vid3-arrow
+{
+  background-image : url(vid3-arrow.png);
+  background-repeat : no-repeat;
+  position : absolute;
+    left: 348px;
+    top: 322px;
+    width: 142px;
+    height: 19px;
+    opacity: 0;
+}
+.video1-badge
+{
+  background-image : url(video1-badge.png);
+  background-repeat : no-repeat;
+  position : absolute;
+  left : 485px;
+  top : 136px;
+  width : 32px;
+  height : 32px;
+  opacity: 0;
+}
+.sales_page
+{
+  background-image : url(sales_page.png);
+  background-repeat : no-repeat;
+  position : absolute;
+  left : 532px;
+  top : 420px;
+  width : 121px;
+  height : 39px;
+  opacity: 0;
+}
+.thank_you_1_
+{
+  background-image : url(thank_you_1_.png);
+  background-repeat : no-repeat;
+  position : absolute;
+  left : 532px;
+  top : 511px;
+  width : 121px;
+  height : 50px;
+  opacity: 0;
+}
+.sales-funnel
+{
+background-color: #FF9801;
+
+-webkit-mask-image: url(sales.svg);
+mask-image: url(sales.svg);
+  position : relative;
+/*  left : 96px;*/
+/*  top : 373px;*/
+  width : 400px;
+  height : 100px;
+
+}
+.video3-badge
+{
+  background-image : url(video3-badge.png);
+  background-repeat : no-repeat;
+  position : absolute;
+  left : 485px;
+  top : 314px;
+  width : 31px;
+  height : 31px;
+  opacity: 0;
+}
+.sales-badge
+{
+  background-image : url(sales-badge.png);
+  background-repeat : no-repeat;
+  position : absolute;
+  left : 478px;
+  top : 417px;
+  width : 45px;
+  height : 45px;
+  opacity: 0;
+}
+.day1-text
+{
+  background-image : url(day1-text.png);
+  background-repeat : no-repeat;
+  position : absolute;
+  left : 489px;
+  top : 96px;
+  width : 30px;
+  height : 30px;
+  opacity: 0;
+}
+.video2-badge
+{
+  opacity: 0;
+  background-image : url(video2-badge.png);
+  background-repeat : no-repeat;
+  position : absolute;
+  left : 485px;
+  top : 227px;
+  width : 31px;
+  height : 32px;
+}
+.sales-arrow
+{
+  opacity: 0;
+  background-image : url(sales-arrow.png);
+  background-repeat : no-repeat;
+  position : absolute;
+     left: 318px;
+    top: 429px;
+    width: 160px;
+    height: 20px;
+  }
+
+#funnel{
+  z-index: 1;
+
+}
+
+.tooltip{  font-size: 16px;
+}
+.tooltip-inner{
+  color:black;
+  background-color: white;
+}
+.tooltip-arrow{
+
+}
+.tooltip.top .tooltip-arrow{ 
+  border-top-color: white; } 
+.tooltip.left .tooltip-arrow{ border-left-color: white; }
+.tooltip.bottom .tooltip-arrow{ border-bottom-color: white; }
+.tooltip.right .tooltip-arrow{ border-right-color: white; } 
+.tooltip-inner{ background-color:white; }
+
+#interactive{
+  opacity: 1;
+  position: absolute;
+  height: 600px;
+  top: 0;
+
+}
+
+#interactive.movedown{
+opacity: 1;
+  height: 600px;
+  top: 600px;
+
+}
+#info{
+opacity: 1;
+position: absolute;
+top: 600px;
+
+}
+#info.moveup{
+opacity: 1;
+position: absolute;
+top: 0px;
+
+}
+
+
+.hidden{
+  opacity: 0;
+
+
+}
+</style>
+</head>
+
+
+<body>
+<!--  <div class="container">
+    <div class="row">
+      <h2>Evergreen Product Launch Funnel Overview</h2>
+    </div>
+</div> -->
+<div class="containter">
+<div class="row">
+        <div id="info" class="col-md-6 hidden">
+        <button id="close"  type="button" class="btn btn-primary">CLOSE</button>
+        <div id="tab-1" class="tab-content">
+          <div class="wistia_embed wistia_async_b8b5gp8tg1" style="height:298px;width:530px">&nbsp;</div>
+            <h2>Evergreen Launch Product Funnel</h2>
+            <h3>Overview</h3>
+            <p>text insert some info here and add some icons and shit</p>
+        </div>
+        <div id="tab-2" class="tab-content">
+                    <div class="wistia_embed wistia_async_b8b5gp8tg1" style="height:298px;width:530px">&nbsp;</div>
+            <h2>Optin form</h2>
+            <h3>Convert</h3>
+            <p>text insert some info here and add some icons and shit</p>
+        </div>
+        <div id="tab-3" class="tab-content">
+                    <div class="wistia_embed wistia_async_b8b5gp8tg1" style="height:298px;width:530px">&nbsp;</div>
+            <h2>Video Series</h2>
+            <h3>Nurture your leads</h3>
+            <p>text insert some info here and add some icons and shit</p>
+        </div>
+        <div id="tab-4" class="tab-content">
+                    <div class="wistia_embed wistia_async_b8b5gp8tg1" style="height:298px;width:530px">&nbsp;</div>
+            <h2>Sales Page</h2>
+            <h3>Make a Purchase</h3>
+            <p>text insert some info here and add some icons and shit</p>
+        </div>
+        <div id="tab-5" class="tab-content">
+                    <div class="wistia_embed wistia_async_b8b5gp8tg1" style="height:298px;width:530px">&nbsp;</div>
+            <h2>Marketing Automation</h2>
+            <h3>Automate your product launch funnel</h3>
+            <p>text insert some info here and add some icons and shit</p>
+        </div>
+    </div>
+  <div  id="interactive" class="col-md-6" >
+       <div class="col-sm-12">
+          <ul id="funnel" class="tabs">
+            <li class="tab-link optin-funnel flip-to-top" data-tab="1">
+
+              <div class="cube 1 flip-to-top">
+                <div class="default-state">
+                    <h2>Opt-in</h2>
+                </div>
+                <div class="active-state">
+                    <span>Opt-In through ads,<br>links, opt-in landing pages</span>
+                </div>
+              </div>
+
+            </li>
+            <li class="tab-link video1-funnel" data-tab="2">   
+              <div class="cube 2 flip-to-top">
+                <div class="default-state">
+                    <h2>Video #1</h2>
+                </div>
+                <div class="active-state">
+                    <span>Opt-In through ads,<br>links, opt-in landing pages</span>
+                </div>
+              </div>
+            </li>
+            <li class="tab-link video2-funnel" data-tab="3">
+              <div class="cube 3 flip-to-top">
+                <div class="default-state">
+                    <h2>Video #2</h2>
+                </div>
+                <div class="active-state">
+                    <span>Opt-In through ads,<br>links, opt-in landing pages</span>
+                </div>
+              </div>
+            </li>
+            <li class="tab-link video3-funnel" data-tab="4">
+              <div class="cube 4 flip-to-top">
+                <div class="default-state">
+                    <h2>Video #3</h2>
+                </div>
+                <div class="active-state">
+                    <span>Opt-In through ads,<br>links, opt-in landing pages</span>
+                </div>
+              </div>
+            </li>
+            <li class="tab-link sales-funnel" data-tab="5">
+              <div class="cube 5 flip-to-top">
+                <div class="default-state">
+                    <h2>Sale</h2>
+                </div>
+                <div class="active-state">
+                    <span>Opt-In through ads,<br>links, opt-in landing pages</span>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <div id="marketing-auto">
+                  <div class="vertical-line arrow3"></div>
+                  <div class="vertical-arrow arrow3">
+                  </div>
+                  <div class="optin-arrow arrow1"></div>
+                  <div class="optin-badge circle"  data-toggle="tooltip" data-placement="right" title="Opt-in form"></div>
+             
+                  <div class="day1-text delay"></div>
+
+                  <div class="vid1-arrow arrow2"></div>
+                  <div class="video1-badge circle" data-toggle="tooltip" data-placement="right" title="Video 1"></div>
+
+
+                  <div class="day3-text delay"></div>
+
+                  <div class="vid2-arrow arrow2"></div>
+                  <div class="video2-badge circle" data-toggle="tooltip" data-placement="right" title="Video 2"></div>
+
+
+                  <div class="day6-text delay"></div>
+
+                  <div class="vid3-arrow arrow2"></div>
+                  <div class="video3-badge circle" data-toggle="tooltip" data-placement="right" title="Video 3"></div>
+
+
+                  <div class="day9-text delay"></div>
+                  <div class="sales-arrow arrow2"></div>
+                  <div class="sales-badge circle" data-toggle="tooltip" data-placement="right" title="Sales page"></div>
+
+
+                  <div class="thankyou-arrow arrow1"></div>
+                  <div class="thank_you-badge circle" data-toggle="tooltip" data-placement="right" title="Thank you page"></div>
+          </div>
+
+        </div>
+    </div>
+
+
+</div>
+</div> 
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.ui.js"></script>
+
+          <script charset="ISO-8859-1" src="https://fast.wistia.com/assets/external/E-v1.js"></script>
+
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+
+    <script>
+
+
+  $(function(){
+
+
+  $("ul.tabs li").velocity("transition.slideLeftIn", {
+    stagger: 250
+
+  });
+        $( ".vertical-line" ).velocity({opacity: "0", height: "0px"});
+      $( ".vertical-arrow" ).velocity({opacity: "0", translateY: "0px"});
+      $( ".vertical-line" ).velocity({opacity: "1", height: "475px"}, {duration: 4000});
+      $( ".vertical-arrow" ).velocity({opacity: "1", translateY: "470px"}, {duration: 4000});
+      $( ".arrow1" ).velocity("transition.slideLeftIn", {delay: 1000, duration: 2000, stagger: 2000});
+      $( ".arrow2" ).velocity("transition.slideRightIn", {delay: 1000, duration: 2000,stagger: 500});
+      $( ".circle" ).velocity("transition.expandIn", {delay: 1000, duration: 1000, stagger: 500});
+      $( ".delay" ).velocity("transition.expandIn", { delay: 1000, duration: 1000, stagger: 500});
+  
+  $('[data-toggle="tooltip"]').tooltip();
+
+
+  $('ul.tabs li').click(function () {
+
+    var tab_id = $(this).attr('data-tab');
+    console.log("tab opened" + tab_id);
+    
+    $('ul.tabs li').removeClass('current');
+    // $('ul.tabs li').velocity({}, {duration: 200});
+    
+    // $('ul.tabs li').velocity('current');
+
+    $('#interactive').addClass('movedown');
+    $("#interactive").addClass('hidden');
+
+    $('#info').addClass('moveup');
+    $("#info").removeClass('hidden');
+
+    $('.tab-content').removeClass('current');
+
+    // $('.tab-content').velocity("transition.fadeOut", 300, "easeOutQuint");
+
+    $(this).addClass('current');
+    $("#tab-" + tab_id).addClass('current');
+    $("#close").velocity()
+    $("#tab-" + tab_id).velocity("transition.slideLeftIn", 700, "easeOutQuint");
+    
+  });
+
+  });
+
+
+$('#close').on('click', function() {
+
+    $("#interactive").removeClass('hidden');
+    $("#info").addClass('hidden');
+    $("#info").removeClass('moveup');
+    $("#interactive").removeClass('movedown');
+
+
+});
+
+   $('#myButton').on('click', function () {
+
+      $('#marketing-auto').children().css("opacity", "0");
+      $( ".vertical-line" ).velocity({opacity: "0", height: "0px"});
+      $( ".vertical-arrow" ).velocity({opacity: "0", translateY: "-480px"});
+
+      $( ".vertical-line" ).velocity({opacity: "1", height: "488px"}, {duration: 2500});
+      $( ".vertical-arrow" ).velocity({opacity: "1", translateY: "488px"}, {duration: 2000});
+      $( ".arrow1" ).velocity("transition.slideLeftIn", {duration: 1000, stagger: 1800});
+      $( ".arrow2" ).velocity("transition.slideRightIn", {duration: 2000,stagger: 500});
+      $( ".circle" ).velocity("transition.expandIn", {stagger: 500});
+      $( ".delay" ).velocity("transition.expandIn", { stagger: 500});
+
+
+  });
+    </script>
+  
+
+
+
+
+</body></html>

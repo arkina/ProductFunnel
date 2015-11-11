@@ -37,12 +37,22 @@ a {
   font-family: "Open Sans", sans-serif;
 }
 
-img.icon{
-       width: 33px;
-    margin-bottom: 7px;
-    margin-right: 5px;
-  }
+.tabs{
 
+    position: absolute;
+    left: -40px;
+    top: -20px;
+
+      -ms-transform: scale(1,1); /* IE 9 */
+    -webkit-transform: scale(1,1); /* Safari */
+    transform: scale(1,1);
+
+
+    -webkit-transition: all 250ms ease;
+  -moz-transition: all 250ms ease;
+  -o-transition: all 250ms ease;
+  transition: all 250ms ease;
+}
 li{
   text-decoration: none;
   list-style: none;
@@ -61,60 +71,30 @@ ul.tabs li{
 
 ul.tabs li.current{
     border-bottom: 10px solid aliceblue;
-  /*` */
-}
-.tabs{
-
-    position: absolute;
-    left: -40px;
-    top: -20px;
-
-      -ms-transform: scale(1,1); /* IE 9 */
-    -webkit-transform: scale(1,1); /* Safari */
-    transform: scale(1,1);
-
-
-    -webkit-transition: all 450ms ease;
-  -moz-transition: all 450ms ease;
-  -o-transition: all 450ms ease;
-  transition: all 450ms ease;
 }
 
-.tab-content{
-    display: none;
-    padding-left: 2em;
-    position: absolute;
-
-}
-
-.tab-content.current{
-  display: block;
-
-}
 
 
 /* Container box to set the sides relative to */
 .cube{
   width: 400px;
   height: 100px;
-  -webkit-transition: all 450ms ease;
-  -moz-transition: all 450ms ease;
-  -o-transition: all 450ms ease;
-  transition: all 450ms ease;
+  -webkit-transition: all 250ms ease;
+  -moz-transition: all 250ms ease;
+  -o-transition: all 250ms ease;
+  transition: all 250ms ease;
   -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
   -o-transform-style: preserve-3d;
   -ms-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
-
 /* The two faces of the cube */
 .default-state,
 .active-state {
   height: 100px;
 
 }
-
 /* Position the faces */
 .default-state {
   -webkit-transform: translateZ(50px);
@@ -147,146 +127,270 @@ ul.tabs li.current{
   font-size: 12px;
   text-transform: uppercase;
   color: #fff;
-  padding-top: 1.5em;
-  margin-left: -12px;
-    -webkit-transition: background 450ms ease;
-  -moz-transition: background 450ms ease;
-  -o-transition: background 450ms ease;
-  transition: background 450ms ease;
+  padding-top: 1em;
+  margin-left: -10px;
+    -webkit-transition: background 400ms ease;
+  -moz-transition: background 250ms ease;
+  -o-transition: background 250ms ease;
+  transition: background 250ms ease;
 
 }
 
-.default-state.small{
-  padding-top: 0.5em;
-  margin-left: -12px;
-}
+
 .active-state {
-  font-size: 12px;
-  color: #fff;
-  padding-top: 3em;
-  margin-left: -12px;
-  opacity: 1!important;
-  -webkit-transition: background 450ms ease;
-  -moz-transition: background 450ms ease;
-  -o-transition: background 450ms ease;
-  transition: background 450ms ease;
-}
 
-.active-state.small {
+  background: #053C58;
   font-size: 12px;
   color: #fff;
   padding-top: 2em;
-  margin-left: -12px;
+  margin-left: -10px;
+  opacity: 1!important;
+  -webkit-transition: background 250ms ease;
+  -moz-transition: background 250ms ease;
+  -o-transition: background 250ms ease;
+  transition: background 250ms ease;
+}
+.1.default-state {
+   background-color: #52BAAC;
 
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #fff;
+  padding-top: 1em;
+  margin-left: -10px;
 
 }
-.active-state.optin{
-  background: #088578;
+.active-state {
+  background: #053C58;
 }
-.active-state.video{
-  background:#0C5685;
+.2.default-state {
+   background-color: red;
+
+}
+.3.default-state {
+   background-color: black;
+
+}
+.4.default-state {
+   background-color: blue;
+
+}
+.5.default-state {
+   background-color: orange;
+ 
+}
+.tab-content{
+    display: none;
+    padding: 2em;
 }
 
-.active-state.sales{
-  background: #BD7B02;
+.tab-content.current{
+  display: block;
 }
 
 
+.video3
+{
+  background-image : url(video3.png);
+  background-repeat : no-repeat;
+  position : absolute;
+  left : 525px;
+  top : 311px;
+  width : 121px;
+  height : 39px;
+  opacity: 0;
+}
+.video2
+{
+  background-image : url(video2.png);
+  background-repeat : no-repeat;
+  position : absolute;
+  left : 525px;
+  top : 226px;
+  width : 121px;
+  height : 38px;
+  opacity: 0;
+}
+.video1
+{
+  background-image : url(video1.png);
+  background-repeat : no-repeat;
+  position : absolute;
+  left : 525px;
+  top : 133px;
+  width : 121px;
+  height : 38px;
+  opacity: 0;
+}
+.vid2-arrow
+{
+  background-image : url(vid2-arrow.png);
+  background-repeat : no-repeat;
+  position : absolute;
+    left: 363px;
+    top: 235px;
+    width: 126px;
+    height: 20px;
+    opacity: 0;
+}
+.thankyou-arrow
+{
+  background-image : url(thankyou-arrow.png);
+  background-repeat : no-repeat;
+  position : absolute;
+    left: 195px;
+    top: 481px;
+    width: 277px;
+    height: 62px;
+    opacity: 0;
 
-
-.optin-funnel
+}
+.video2-funnel
 {
 
+  background-color: #008BBC;
+-webkit-mask-image: url(vid2.svg);
+mask-image: url(vid2.svg);
 
-background-color: #52BAAC;
--webkit-mask-image: url(optin-funnel.png);
-mask-image: url(optin-funnel.png);
   position : relative;
-  width : 399px;
+/*  left : 74px;
+  top : 278px;*/
+  width : 400px;
   height : 100px;
 }
-
+.day9-text
+{
+  background-image : url(day9-text.png);
+  background-repeat : no-repeat;
+  position : absolute;
+  left : 482px;
+  top : 362px;
+  width : 36px;
+  height : 30px;
+  opacity: 0;
+}
 .video1-funnel
 {
    background-color:  #319FDD;
--webkit-mask-image: url(vid1-funnel.png);
-mask-image: url(vid1-funnel.png);
+-webkit-mask-image: url(vid1.svg);
+mask-image: url(vid1.svg);
   position : relative;
 
 /*  top : 278px;*/
   width : 400px;
   height : 100px;
 }
-
-.video2-funnel
-{
-
-  background-color: #008BBC;
--webkit-mask-image: url(vid2-funnel.png);
-mask-image: url(vid2-funnel.png);
-
-  position : relative;
-/*  left : 74px;
-  top : 278px;*/
-  width : 400px;
-  height : 100px;
-}
 .video3-funnel
 {
    background-color:  #046D9B;
--webkit-mask-image: url(vid3-funnel.png);
-mask-image: url(vid3-funnel.png);
+-webkit-mask-image: url(vid3.svg);
+mask-image: url(vid3.svg);
   position : relative;
 /*  left : 74px;
   top : 278px;*/
   width : 400px;
   height : 100px;
 }
-
-
-.sales-funnel
+.vertical-line
 {
-background-color: #FF9801;
+  border-left: 2px dotted white;
+  position : absolute;
+  left : 550px;
+  top : 53px;
+  width : 28px;
+  opacity: 0;
+}
+.vertical-arrow
+{
+  background-color: white;
 
--webkit-mask-image: url(sales-funnel.png);
-mask-image: url(sales-funnel.png);
+-webkit-mask-image: url(arrowhead.svg);
+mask-image: url(arrowhead.svg);
+  position : absolute;
+  left : 537px;
+  top : 53px;
+  width : 28px;
+  height : 18px;
+  opacity: 0;
+}
+.day3-text
+{
+  background-image : url(day3-text.png);
+  background-repeat : no-repeat;
+  position : absolute;
+  left : 482px;
+  top : 182px;
+  width : 36px;
+  height : 30px;
+  opacity: 0;
+}
+.optin-funnel
+{
+
+
+background-color: #52BAAC;
+-webkit-mask-image: url(optin.svg);
+mask-image: url(optin.svg);
   position : relative;
-/*  left : 96px;*/
-/*  top : 373px;*/
-  width : 400px;
+  width : 399px;
   height : 100px;
-
 }
-
-.shoppingcart-funnel
+.thank_you-badge
 {
-background-color: #FF7F00;
-
--webkit-mask-image: url(shoppingcart.png);
-mask-image: url(sales-funnel.png);
-  position : relative;
-/*  left : 96px;*/
-/*  top : 373px;*/
-  width : 400px;
-  height : 60px;
-
+  background-image : url(thank_you-badge.png);
+  background-repeat : no-repeat;
+  position : absolute;
+  left : 487px;
+  top : 513px;
+  width : 31px;
+  height : 32px;
+  opacity: 0;
 }
-
-.thankyou-funnel
+.day6-text
 {
-background-color: #F96500;
-
--webkit-mask-image: url(thankyou.png);
-mask-image: url(sales-funnel.png);
-  position : relative;
-/*  left : 96px;*/
-/*  top : 373px;*/
-  width : 400px;
-  height : 60px;
+  background-image : url(day6-text.png);
+  background-repeat : no-repeat;
+  position : absolute;
+  left : 482px;
+  top : 272px;
+  width : 36px;
+  height : 30px;
+  opacity: 0;
+}
+.optin_form
+{
+  background-image : url(optin_form.png);
+  background-repeat : no-repeat;
+  position : absolute;
+  left : 530px;
+  top : 28px;
+  width : 121px;
+  height : 38px;
+  opacity: 0;
+}
+.cart-arrow
+{
+  background-image : url(cart-arrow.png);
+  background-repeat : no-repeat;
+  position : absolute;
+  left : 263px;
+  top : 532px;
+  width : 106px;
+  height : 23px;
+  opacity: 0;
+}
+.vid1-arrow
+{
+  background-image : url(vid1-arrow.png);
+  background-repeat : no-repeat;
+  position : absolute;
+    left: 381px;
+    top: 142px;
+    width: 106px;
+    height: 19px;
+    opacity: 0;
 
 }
-
-
 .optin-badge
 {
   background-image : url(optin-badge.png);
@@ -309,22 +413,17 @@ mask-image: url(sales-funnel.png);
   height : 28px;
   opacity: 0;
 }
-
-
-.vid1-arrow
+.vid3-arrow
 {
-  background-image : url(vid1-arrow.png);
+  background-image : url(vid3-arrow.png);
   background-repeat : no-repeat;
   position : absolute;
-    left: 381px;
-    top: 142px;
-    width: 106px;
+    left: 348px;
+    top: 322px;
+    width: 142px;
     height: 19px;
     opacity: 0;
-
 }
-
-
 .video1-badge
 {
   background-image : url(video1-badge.png);
@@ -336,42 +435,40 @@ mask-image: url(sales-funnel.png);
   height : 32px;
   opacity: 0;
 }
-
-.vid2-arrow
+.sales_page
 {
-  background-image : url(vid2-arrow.png);
+  background-image : url(sales_page.png);
   background-repeat : no-repeat;
   position : absolute;
-    left: 363px;
-    top: 235px;
-    width: 126px;
-    height: 20px;
-    opacity: 0;
-}
-
-.video2-badge
-{
+  left : 532px;
+  top : 420px;
+  width : 121px;
+  height : 39px;
   opacity: 0;
-  background-image : url(video2-badge.png);
-  background-repeat : no-repeat;
-  position : absolute;
-  left : 485px;
-  top : 227px;
-  width : 31px;
-  height : 32px;
 }
-
-
-.vid3-arrow
+.thank_you_1_
 {
-  background-image : url(vid3-arrow.png);
+  background-image : url(thank_you_1_.png);
   background-repeat : no-repeat;
   position : absolute;
-    left: 348px;
-    top: 322px;
-    width: 142px;
-    height: 19px;
-    opacity: 0;
+  left : 532px;
+  top : 511px;
+  width : 121px;
+  height : 50px;
+  opacity: 0;
+}
+.sales-funnel
+{
+background-color: #FF9801;
+
+-webkit-mask-image: url(sales.svg);
+mask-image: url(sales.svg);
+  position : relative;
+/*  left : 96px;*/
+/*  top : 373px;*/
+  width : 400px;
+  height : 100px;
+
 }
 .video3-badge
 {
@@ -384,70 +481,6 @@ mask-image: url(sales-funnel.png);
   height : 31px;
   opacity: 0;
 }
-.thankyou-arrow
-{
-  background-image : url(thankyou-arrow.png);
-  background-repeat : no-repeat;
-  position : absolute;
-    left: 195px;
-    top: 481px;
-    width: 277px;
-    height: 62px;
-    opacity: 0;
-
-}
-
-.thank_you-badge
-{
-  background-image : url(thank_you-badge.png);
-  background-repeat : no-repeat;
-  position : absolute;
-  left : 487px;
-  top : 513px;
-  width : 31px;
-  height : 32px;
-  opacity: 0;
-}
-
-.thank_you_1_
-{
-  background-image : url(thank_you_1_.png);
-  background-repeat : no-repeat;
-  position : absolute;
-  left : 532px;
-  top : 511px;
-  width : 121px;
-  height : 50px;
-  opacity: 0;
-}
-
-
-.cart-arrow
-{
-  background-image : url(cart-arrow.png);
-  background-repeat : no-repeat;
-  position : absolute;
-  left: 290px;
-  top: 538px;
-  width : 106px;
-  height : 23px;
-  opacity: 0;
-}
-
-
-.sales_page
-{
-  background-image : url(sales_page.png);
-  background-repeat : no-repeat;
-  position : absolute;
-  left : 532px;
-  top : 420px;
-  width : 121px;
-  height : 39px;
-  opacity: 0;
-}
-
-
 .sales-badge
 {
   background-image : url(sales-badge.png);
@@ -459,7 +492,28 @@ mask-image: url(sales-funnel.png);
   height : 45px;
   opacity: 0;
 }
-
+.day1-text
+{
+  background-image : url(day1-text.png);
+  background-repeat : no-repeat;
+  position : absolute;
+  left : 489px;
+  top : 96px;
+  width : 30px;
+  height : 30px;
+  opacity: 0;
+}
+.video2-badge
+{
+  opacity: 0;
+  background-image : url(video2-badge.png);
+  background-repeat : no-repeat;
+  position : absolute;
+  left : 485px;
+  top : 227px;
+  width : 31px;
+  height : 32px;
+}
 .sales-arrow
 {
   opacity: 0;
@@ -472,89 +526,10 @@ mask-image: url(sales-funnel.png);
     height: 20px;
   }
 
+  .marketing{
 
-
-/*TIME DELAY TEXT */
-
-.day1-text
-{
-  background-image : url(day1-text.png);
-  background-repeat : no-repeat;
-  position : absolute;
-  left : 489px;
-  top : 96px;
-  width : 30px;
-  height : 30px;
-  opacity: 0;
-}
-
-
-.day3-text
-{
-  background-image : url(day3-text.png);
-  background-repeat : no-repeat;
-  position : absolute;
-  left : 482px;
-  top : 182px;
-  width : 36px;
-  height : 30px;
-  opacity: 0;
-}
-
-.day6-text
-{
-  background-image : url(day6-text.png);
-  background-repeat : no-repeat;
-  position : absolute;
-  left : 482px;
-  top : 272px;
-  width : 36px;
-  height : 30px;
-  opacity: 0;
-}
-
-.day9-text
-{
-  background-image : url(day9-text.png);
-  background-repeat : no-repeat;
-  position : absolute;
-  left : 482px;
-  top : 362px;
-  width : 36px;
-  height : 30px;
-  opacity: 0;
-}
-
-
-
-/*VERTICAL LINE */
-
-.vertical-line
-{
-  border-left: 2px dotted white;
-  position : absolute;
-  left : 550px;
-  top : 53px;
-  width : 28px;
-  opacity: 0;
-}
-.vertical-arrow
-{
-  background-color: white;
-
--webkit-mask-image: url(arrowhead-img.png);
-mask-image: url(arrowhead-img.png);
-  position : absolute;
-  left : 537px;
-  top : 53px;
-  width : 28px;
-  height : 18px;
-  opacity: 0;
-}
-
-
-
-
+    
+  }
 
 #funnel{
   z-index: 1;
@@ -581,8 +556,6 @@ mask-image: url(arrowhead-img.png);
   opacity: 1;
   position: relative;
   height: 600px;
-  padding-top: 5em;
-
 /*  top: 0;*/
 
 }
@@ -590,36 +563,17 @@ mask-image: url(arrowhead-img.png);
 #info{
 opacity: 1;
 position: relative;
-/*height: 600px;*/
-height: auto;
+height: 600px;
 padding: 5em;
 
 
 }
+
 #marketing-auto{
-  margin-left: 1em;
-  position: relative;
+margin-left: 10px;
+    height: 600px;
+    position: relative;
 }
-
-
-
-.tab{
-    padding: 1em;
-    display: block;
-    width: 530px;
-}
-.tab.optin{
-  background-color: #52BAAC;
-}
-
-.tab.video{
-  background-color: #008BBC;
-}
-
-.tab.sales{
-  background-color: #FF9801;
-}
-
 
 </style>
 </head>
@@ -635,47 +589,34 @@ padding: 5em;
 <div class="row">
       <div id="info" class="col-md-6">
         <div id="tab-1" class="tab-content">
-        
           <div class="wistia_embed wistia_async_b8b5gp8tg1" style="height:298px;width:530px">&nbsp;</div>
-          <div class="tab optin">
-            
-            <h2><img src="email-icon.png" class="icon">Opt-in</h2>
-          </div>
-       
-            <h3>Your prospects have converted!</h3>
-            <p>text insert some info here </p>             
+            <h2>Evergreen Launch Product Funnel</h2>
+            <h3>Overview</h3>
+            <p>text insert some info here and add some icons and shit</p>
         </div>
         <div id="tab-2" class="tab-content">
-            <div class="wistia_embed wistia_async_b8b5gp8tg1" style="height:298px;width:530px">&nbsp;</div>
-            <div class="tab video">
-              <h2><img src="nurture-icon.png" class="icon">Video #1</h2>
-            </div>
-            <h3>Start nurturing your leads</h3>
-            <p>text insert some info here </p>
+                    <div class="wistia_embed wistia_async_b8b5gp8tg1" style="height:298px;width:530px">&nbsp;</div>
+            <h2>Optin form</h2>
+            <h3>Convert</h3>
+            <p>text insert some info here and add some icons and shit</p>
         </div>
         <div id="tab-3" class="tab-content">
                     <div class="wistia_embed wistia_async_b8b5gp8tg1" style="height:298px;width:530px">&nbsp;</div>
-            <div class="tab video">
-            <h2><img src="nurture-icon.png" class="icon">Video #2</h2>
-          </div>
-            <h3>Keep nurturing your leads.</h3>
-            <p>text insert some info here </p>
+            <h2>Video Series</h2>
+            <h3>Nurture your leads</h3>
+            <p>text insert some info here and add some icons and shit</p>
         </div>
         <div id="tab-4" class="tab-content">
                     <div class="wistia_embed wistia_async_b8b5gp8tg1" style="height:298px;width:530px">&nbsp;</div>
-            <div class="tab video">
-            <h2><img src="nurture-icon.png" class="icon">Video #3</h2>
-          </div>
-            <h3>Convince them. Show your product in use.</h3>
-            <p>text insert some info here </p>
+            <h2>Sales Page</h2>
+            <h3>Make a Purchase</h3>
+            <p>text insert some info here and add some icons and shit</p>
         </div>
         <div id="tab-5" class="tab-content">
                     <div class="wistia_embed wistia_async_b8b5gp8tg1" style="height:298px;width:530px">&nbsp;</div>
-            <div class="tab sales">
-            <h2><img src="shop-icon.png" class="icon">Sales Page</h2>
-          </div>
-            <h3>Make a Purchase</h3>
-            <p>text insert some info here </p>
+            <h2>Marketing Automation</h2>
+            <h3>Automate your product launch funnel</h3>
+            <p>text insert some info here and add some icons and shit</p>
         </div>
         <div id="start"class="col-sm-8">
           <div class="bottom-right">
@@ -687,7 +628,7 @@ padding: 5em;
 
         </div>
     </div>
-  <div  id="interactive" class="col-md-6" >
+  <div  id="interactive" class="col-md-5" >
        <div class="col-sm-12">
           <ul id="funnel" class="tabs">
            
@@ -697,9 +638,8 @@ padding: 5em;
               <div class="cube 1 flip-to-top">
                 <div class="default-state">
                     <h2>Opt-in</h2>
-       <!--              <img src="email-icon.png" class="icon"> -->
                 </div>
-                <div class="active-state optin">
+                <div class="active-state">
                     <span>Opt-In through ads,<br>links, opt-in landing pages</span>
                 </div>
               </div>
@@ -709,9 +649,8 @@ padding: 5em;
               <div class="cube 2 flip-to-top">
                 <div class="default-state">
                     <h2>Video #1</h2>
-       <!--              <img src="vid1-icon.png" class="icon"> -->
                 </div>
-                <div class="active-state video">
+                <div class="active-state">
                     <span>Opt-In through ads,<br>links, opt-in landing pages</span>
                 </div>
               </div>
@@ -720,9 +659,8 @@ padding: 5em;
               <div class="cube 3 flip-to-top">
                 <div class="default-state">
                     <h2>Video #2</h2>
-           <!--          <img src="video-icon.png" class="icon"> -->
                 </div>
-                <div class="active-state video">
+                <div class="active-state">
                     <span>Opt-In through ads,<br>links, opt-in landing pages</span>
                 </div>
               </div>
@@ -731,9 +669,8 @@ padding: 5em;
               <div class="cube 4 flip-to-top">
                 <div class="default-state">
                     <h2>Video #3</h2>
-               <!--      <img src="video-icon.png" class="icon"> -->
                 </div>
-                <div class="active-state video">
+                <div class="active-state">
                     <span>Opt-In through ads,<br>links, opt-in landing pages</span>
                 </div>
               </div>
@@ -742,32 +679,9 @@ padding: 5em;
               <div class="cube 5 flip-to-top">
                 <div class="default-state">
                     <h2>Sale</h2>
-      <!--               <img src="shop-icon.png" class="icon"> -->
                 </div>
-                <div class="active-state sales">
+                <div class="active-state">
                     <span>Opt-In through ads,<br>links, opt-in landing pages</span>
-                </div>
-              </div>
-            </li>
-            <li class="tab-link shoppingcart-funnel" data-tab="6">
-              <div class="cube 5 flip-to-top">
-                <div class="default-state small">
-                    <h4>Shopping<br>Cart</h4>
-      <!--               <img src="shop-icon.png" class="icon"> -->
-                </div>
-                <div class="active-state small sales">
-                    <span>Opt-In through ads</span>
-                </div>
-              </div>
-            </li>
-            <li class="tab-link thankyou-funnel" data-tab="7">
-              <div class="cube 5 flip-to-top">
-                <div class="default-state small">
-                    <h4>Thank you<br>Page</h4>
-      <!--               <img src="shop-icon.png" class="icon"> -->
-                </div>
-                <div class="active-state small sales">
-                    <span>Opt-In through ads</span>
                 </div>
               </div>
             </li>
@@ -818,7 +732,6 @@ padding: 5em;
 
 
                   <div  class="thankyou-arrow arrow1 funnel-5"></div>
-                  <div class="cart-arrow arrow1 funnel-5"></div>
                   <div   class="thank_you-badge circle funnel-5" data-toggle="tooltip" data-placement="right" title="Thank you page"></div>
              
           </div>
@@ -833,6 +746,9 @@ padding: 5em;
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.ui.js"></script>
+
           <script charset="ISO-8859-1" src="https://fast.wistia.com/assets/external/E-v1.js"></script>
 
 
@@ -841,37 +757,31 @@ padding: 5em;
     <script>
 
 
+  $(function(){
 
-$(function () {
-  $.getScript("https://cdn.jsdelivr.net/velocity/1.2.3/velocity.min.js", function() {
-    console.log('velocity loaded');
-    $.getScript("https://cdn.jsdelivr.net/velocity/1.2.3/velocity.ui.min.js", function() {
-      console.log('velocity ui loaded');
-
-         $('#start').show();
+  
+  $('#start').velocity("transition.fadeIn")
   $("ul.tabs li").velocity("transition.slideLeftIn", { stagger: 250});
 
       $( ".vertical-line" ).velocity({opacity: "0", height: "0px"});
       $( ".vertical-arrow" ).velocity({opacity: "0", translateY: "0px"});
       $( ".vertical-line" ).velocity({opacity: "1", height: "475px"}, {duration: 4000});
       $( ".vertical-arrow" ).velocity({opacity: "1", translateY: "470px"}, {duration: 4000});
-      $( ".arrow1" ).velocity("transition.slideLeftIn", {delay: 1000, duration: 2000, stagger: 1500});
+      $( ".arrow1" ).velocity("transition.slideLeftIn", {delay: 1000, duration: 2000, stagger: 2000});
       $( ".arrow2" ).velocity("transition.slideRightIn", {delay: 1000, duration: 2000,stagger: 500});
       $( ".circle" ).velocity("transition.expandIn", {delay: 1000, duration: 1000, stagger: 500});
       $( ".delay" ).velocity("transition.expandIn", { delay: 1000, duration: 1000, stagger: 500});
   
   $('[data-toggle="tooltip"]').tooltip();
 
+  });
 
 
   $('ul.tabs li').click(function () {
-        $('.tab-content').velocity({opacity: "0"}, 10);
 
     var tab_id = $(this).attr('data-tab');
     $('#start').hide();
-
     $('[class*=" arrow3"]').fadeOut();
-    
     $('.funnel-1').velocity({marginTop: "2.5em", marginBottom: "2.5em" , opacity: '0.2'}, {duration: 400}, "ease");
     $('.funnel-2').velocity({marginTop: "2.5em", marginBottom: "2.5em" , opacity: '0.2'}, {duration: 400}, "ease");
     $('.funnel-3').velocity({marginTop: "2.5em", marginBottom: "2em" , opacity: '0.2'}, {duration: 400}, "ease");
@@ -884,16 +794,18 @@ $(function () {
     $(".funnel-" + tab_id + ".arrow1").fadeOut();
     $(".funnel-" + tab_id + ".arrow2").fadeOut();
 
-    $(".funnel-" + tab_id + ".circle").velocity({scale: "1.1", opacity: '1'}, {duration: 500}, "ease");
+    $(".funnel-" + tab_id + ".circle").velocity({scale: "1.2", opacity: '1'}, {duration: 500}, "ease");
     $(".funnel-" + tab_id + ".arrow1").velocity("transition.slideLeftIn");
     $(".funnel-" + tab_id + ".arrow2").velocity("transition.slideRightIn");
 
-    $('ul.tabs li').removeClass('current');
+    $(".funnel-" + tab_id + ".delay").velocity({opacity: '1'}, {duration: 500}, "ease");
+
+
     
+    $('ul.tabs li').removeClass('current');
+    $('.tab-content').velocity("fadeOut", 10, 'ease');
 
     $('.tab-content').removeClass('current');
-
-    $(".funnel-" + tab_id + ".delay").velocity({opacity: '1'}, {duration: 500}, "ease");
 
    $(this).addClass('current');
 
@@ -903,21 +815,17 @@ $(function () {
 
     $("#tab-" + tab_id).addClass('current');
 
-    $("#tab-" + tab_id).velocity("transition.slideLeftIn", {delay: 100, duration: 1000}, "ease");
+    $("#tab-" + tab_id).velocity("transition.slideLeftIn", 1000, "easeOutQuint");
     
   });
 
 
-    });
-  });  
- 
-
-
-  });
 
 
    </script>
   
-</body>
 
-</html>
+
+
+
+</body></html>

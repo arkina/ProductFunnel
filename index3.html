@@ -74,22 +74,19 @@ ul.tabs li.current{
     transform: scale(1,1);
 
 
-    -webkit-transition: all 450ms ease;
-  -moz-transition: all 450ms ease;
-  -o-transition: all 450ms ease;
-  transition: all 450ms ease;
+    -webkit-transition: all 250ms ease;
+  -moz-transition: all 250ms ease;
+  -o-transition: all 250ms ease;
+  transition: all 250ms ease;
 }
 
 .tab-content{
     display: none;
-    padding-left: 2em;
-    position: absolute;
-
+    padding: 2em;
 }
 
 .tab-content.current{
   display: block;
-
 }
 
 
@@ -97,24 +94,22 @@ ul.tabs li.current{
 .cube{
   width: 400px;
   height: 100px;
-  -webkit-transition: all 450ms ease;
-  -moz-transition: all 450ms ease;
-  -o-transition: all 450ms ease;
-  transition: all 450ms ease;
+  -webkit-transition: all 250ms ease;
+  -moz-transition: all 250ms ease;
+  -o-transition: all 250ms ease;
+  transition: all 250ms ease;
   -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
   -o-transform-style: preserve-3d;
   -ms-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
-
 /* The two faces of the cube */
 .default-state,
 .active-state {
   height: 100px;
 
 }
-
 /* Position the faces */
 .default-state {
   -webkit-transform: translateZ(50px);
@@ -148,38 +143,27 @@ ul.tabs li.current{
   text-transform: uppercase;
   color: #fff;
   padding-top: 1.5em;
-  margin-left: -12px;
-    -webkit-transition: background 450ms ease;
-  -moz-transition: background 450ms ease;
-  -o-transition: background 450ms ease;
-  transition: background 450ms ease;
+  margin-left: -10px;
+    -webkit-transition: background 400ms ease;
+  -moz-transition: background 250ms ease;
+  -o-transition: background 250ms ease;
+  transition: background 250ms ease;
 
 }
 
-.default-state.small{
-  padding-top: 0.5em;
-  margin-left: -12px;
-}
+
 .active-state {
   font-size: 12px;
   color: #fff;
   padding-top: 3em;
-  margin-left: -12px;
+  margin-left: -10px;
   opacity: 1!important;
-  -webkit-transition: background 450ms ease;
-  -moz-transition: background 450ms ease;
-  -o-transition: background 450ms ease;
-  transition: background 450ms ease;
+  -webkit-transition: background 250ms ease;
+  -moz-transition: background 250ms ease;
+  -o-transition: background 250ms ease;
+  transition: background 250ms ease;
 }
 
-.active-state.small {
-  font-size: 12px;
-  color: #fff;
-  padding-top: 2em;
-  margin-left: -12px;
-
-
-}
 .active-state.optin{
   background: #088578;
 }
@@ -258,33 +242,6 @@ mask-image: url(sales-funnel.png);
 
 }
 
-.shoppingcart-funnel
-{
-background-color: #FF7F00;
-
--webkit-mask-image: url(shoppingcart.png);
-mask-image: url(sales-funnel.png);
-  position : relative;
-/*  left : 96px;*/
-/*  top : 373px;*/
-  width : 400px;
-  height : 60px;
-
-}
-
-.thankyou-funnel
-{
-background-color: #F96500;
-
--webkit-mask-image: url(thankyou.png);
-mask-image: url(sales-funnel.png);
-  position : relative;
-/*  left : 96px;*/
-/*  top : 373px;*/
-  width : 400px;
-  height : 60px;
-
-}
 
 
 .optin-badge
@@ -749,28 +706,6 @@ padding: 5em;
                 </div>
               </div>
             </li>
-            <li class="tab-link shoppingcart-funnel" data-tab="6">
-              <div class="cube 5 flip-to-top">
-                <div class="default-state small">
-                    <h4>Shopping<br>Cart</h4>
-      <!--               <img src="shop-icon.png" class="icon"> -->
-                </div>
-                <div class="active-state small sales">
-                    <span>Opt-In through ads</span>
-                </div>
-              </div>
-            </li>
-            <li class="tab-link thankyou-funnel" data-tab="7">
-              <div class="cube 5 flip-to-top">
-                <div class="default-state small">
-                    <h4>Thank you<br>Page</h4>
-      <!--               <img src="shop-icon.png" class="icon"> -->
-                </div>
-                <div class="active-state small sales">
-                    <span>Opt-In through ads</span>
-                </div>
-              </div>
-            </li>
           </ul>
           <div id="marketing-auto">
 
@@ -833,6 +768,9 @@ padding: 5em;
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.ui.js"></script>
+
           <script charset="ISO-8859-1" src="https://fast.wistia.com/assets/external/E-v1.js"></script>
 
 
@@ -841,14 +779,10 @@ padding: 5em;
     <script>
 
 
+  $(function(){
 
-$(function () {
-  $.getScript("https://cdn.jsdelivr.net/velocity/1.2.3/velocity.min.js", function() {
-    console.log('velocity loaded');
-    $.getScript("https://cdn.jsdelivr.net/velocity/1.2.3/velocity.ui.min.js", function() {
-      console.log('velocity ui loaded');
-
-         $('#start').show();
+  
+  $('#start').velocity("transition.fadeIn")
   $("ul.tabs li").velocity("transition.slideLeftIn", { stagger: 250});
 
       $( ".vertical-line" ).velocity({opacity: "0", height: "0px"});
@@ -862,16 +796,14 @@ $(function () {
   
   $('[data-toggle="tooltip"]').tooltip();
 
+  });
 
 
   $('ul.tabs li').click(function () {
-        $('.tab-content').velocity({opacity: "0"}, 10);
 
     var tab_id = $(this).attr('data-tab');
     $('#start').hide();
-
     $('[class*=" arrow3"]').fadeOut();
-    
     $('.funnel-1').velocity({marginTop: "2.5em", marginBottom: "2.5em" , opacity: '0.2'}, {duration: 400}, "ease");
     $('.funnel-2').velocity({marginTop: "2.5em", marginBottom: "2.5em" , opacity: '0.2'}, {duration: 400}, "ease");
     $('.funnel-3').velocity({marginTop: "2.5em", marginBottom: "2em" , opacity: '0.2'}, {duration: 400}, "ease");
@@ -888,12 +820,14 @@ $(function () {
     $(".funnel-" + tab_id + ".arrow1").velocity("transition.slideLeftIn");
     $(".funnel-" + tab_id + ".arrow2").velocity("transition.slideRightIn");
 
-    $('ul.tabs li').removeClass('current');
+    $(".funnel-" + tab_id + ".delay").velocity({opacity: '1'}, {duration: 500}, "ease");
+
+
     
+    $('ul.tabs li').removeClass('current');
+    $('.tab-content').velocity("fadeOut", 10, 'ease');
 
     $('.tab-content').removeClass('current');
-
-    $(".funnel-" + tab_id + ".delay").velocity({opacity: '1'}, {duration: 500}, "ease");
 
    $(this).addClass('current');
 
@@ -903,17 +837,11 @@ $(function () {
 
     $("#tab-" + tab_id).addClass('current');
 
-    $("#tab-" + tab_id).velocity("transition.slideLeftIn", {delay: 100, duration: 1000}, "ease");
+    $("#tab-" + tab_id).velocity("transition.slideLeftIn", 1000, "easeOutQuint");
     
   });
 
 
-    });
-  });  
- 
-
-
-  });
 
 
    </script>

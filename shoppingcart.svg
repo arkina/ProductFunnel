@@ -3,7 +3,11 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="-119 191 400 100" style="enable-background:new -119 191 400 100;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:#319FDD;}
+	.st0{fill:#FF9801;}
+	.st1{fill:#FF7F00;}
+	.st2{fill:#F96500;}
 </style>
-<polygon id="video1-funnel" class="st0" points="242.1,290.8 260.4,191.2 -98.4,191.2 -80.3,290.8 "/>
+<polygon id="sales-funnel" class="st0" points="-307.2,548 -287,654 -85.1,654 -64.8,548 "/>
+<polygon id="sales-funnel_1_" class="st1" points="-21.2,191 -1,297 162.9,297 183.2,191 "/>
+<polygon id="sales-funnel_2_" class="st2" points="138.9,470 159.1,576 285,576 305.1,470 "/>
 </svg>
