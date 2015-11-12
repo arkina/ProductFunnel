@@ -28,6 +28,7 @@ body {
   font-family: "Open Sans", sans-serif;
   color: white;
   background-color: rgb(13, 75, 118);
+  display: block;
 
 }
 
@@ -60,7 +61,7 @@ ul.tabs li{
 }
 
 ul.tabs li.current{
-    border-bottom: 10px solid aliceblue;
+    border-bottom: 5px solid aliceblue;
   /*` */
 }
 .tabs{
@@ -144,7 +145,7 @@ ul.tabs li.current{
   margin: 0 auto;
 }
 .default-state{
-  font-size: 12px;
+  font-size: 10px;
   text-transform: uppercase;
   color: #fff;
   padding-top: 1.5em;
@@ -157,8 +158,8 @@ ul.tabs li.current{
 }
 
 .default-state.small{
-  padding-top: 0.5em;
-  margin-left: -12px;
+  padding-top: 0.3em;
+  margin-left: -5px;
 }
 .active-state {
   font-size: 12px;
@@ -188,7 +189,7 @@ ul.tabs li.current{
 }
 
 .active-state.sales{
-  background: #BD7B02;
+  background: #CB5500;
 }
 
 
@@ -262,6 +263,7 @@ mask-image: url(sales-funnel.png);
 {
 background-color: #FF7F00;
 
+
 -webkit-mask-image: url(shoppingcart.png);
 mask-image: url(sales-funnel.png);
   position : relative;
@@ -283,6 +285,7 @@ mask-image: url(sales-funnel.png);
 /*  top : 373px;*/
   width : 400px;
   height : 60px;
+  margin-top: 5em;
 
 }
 
@@ -293,7 +296,7 @@ mask-image: url(sales-funnel.png);
   background-repeat : no-repeat;
   position : absolute;
   left : 478px;
-  top : 25px;
+  top : 33px;
   width : 46px;
   height : 46px;
   opacity: 0;
@@ -304,7 +307,7 @@ mask-image: url(sales-funnel.png);
   background-repeat : no-repeat;
   position : absolute;
   left : 323px;
-  top : 34px;
+  top : 41px;
   width : 146px;
   height : 28px;
   opacity: 0;
@@ -317,7 +320,7 @@ mask-image: url(sales-funnel.png);
   background-repeat : no-repeat;
   position : absolute;
     left: 381px;
-    top: 142px;
+    top: 145px;
     width: 106px;
     height: 19px;
     opacity: 0;
@@ -331,7 +334,7 @@ mask-image: url(sales-funnel.png);
   background-repeat : no-repeat;
   position : absolute;
   left : 485px;
-  top : 136px;
+  top : 139px;
   width : 32px;
   height : 32px;
   opacity: 0;
@@ -343,7 +346,7 @@ mask-image: url(sales-funnel.png);
   background-repeat : no-repeat;
   position : absolute;
     left: 363px;
-    top: 235px;
+    top: 241px;
     width: 126px;
     height: 20px;
     opacity: 0;
@@ -356,7 +359,7 @@ mask-image: url(sales-funnel.png);
   background-repeat : no-repeat;
   position : absolute;
   left : 485px;
-  top : 227px;
+  top : 234px;
   width : 31px;
   height : 32px;
 }
@@ -368,7 +371,7 @@ mask-image: url(sales-funnel.png);
   background-repeat : no-repeat;
   position : absolute;
     left: 348px;
-    top: 322px;
+    top: 340px;
     width: 142px;
     height: 19px;
     opacity: 0;
@@ -379,7 +382,7 @@ mask-image: url(sales-funnel.png);
   background-repeat : no-repeat;
   position : absolute;
   left : 485px;
-  top : 314px;
+  top : 332px;
   width : 31px;
   height : 31px;
   opacity: 0;
@@ -388,12 +391,13 @@ mask-image: url(sales-funnel.png);
 {
   background-image : url(thankyou-arrow.png);
   background-repeat : no-repeat;
-  position : absolute;
+    position: absolute;
     left: 195px;
-    top: 481px;
-    width: 277px;
+    top: 544px;
+    width: 281px;
     height: 62px;
     opacity: 0;
+
 
 }
 
@@ -402,10 +406,10 @@ mask-image: url(sales-funnel.png);
   background-image : url(thank_you-badge.png);
   background-repeat : no-repeat;
   position : absolute;
-  left : 487px;
-  top : 513px;
-  width : 31px;
-  height : 32px;
+    left: 487px;
+    top: 632px;
+    width: 31px;
+    height: 32px;
   opacity: 0;
 }
 
@@ -434,6 +438,17 @@ mask-image: url(sales-funnel.png);
   opacity: 0;
 }
 
+.shopping-badge
+{
+  background-image : url(thank_you-badge.png);
+  background-repeat : no-repeat;
+  position : absolute;
+    left: 487px;
+    top: 573px;
+    width: 31px;
+    height: 32px;
+    opacity: 0;
+}
 
 .sales_page
 {
@@ -454,7 +469,7 @@ mask-image: url(sales-funnel.png);
   background-repeat : no-repeat;
   position : absolute;
   left : 478px;
-  top : 417px;
+  top : 433px;
   width : 45px;
   height : 45px;
   opacity: 0;
@@ -467,12 +482,37 @@ mask-image: url(sales-funnel.png);
   background-repeat : no-repeat;
   position : absolute;
      left: 318px;
-    top: 429px;
+    top: 448px;
     width: 160px;
     height: 20px;
   }
 
 
+.shopping-arrow {
+background-image: url(arrow_03.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 298px;
+    top: 639px;
+    /* transform: scale(-1,-1); */
+    width: 230px;
+    height: 20px;
+    opacity: 0;
+
+
+}
+
+.shopping2-arrow{
+
+    background-image: url(arrow_down_2.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 162px;
+    top: 545px;
+    width: 80px;
+    height: 80px;
+    opacity: 0;
+}
 
 /*TIME DELAY TEXT */
 
@@ -482,7 +522,7 @@ mask-image: url(sales-funnel.png);
   background-repeat : no-repeat;
   position : absolute;
   left : 489px;
-  top : 96px;
+  top: 96px;
   width : 30px;
   height : 30px;
   opacity: 0;
@@ -495,7 +535,7 @@ mask-image: url(sales-funnel.png);
   background-repeat : no-repeat;
   position : absolute;
   left : 482px;
-  top : 182px;
+  top : 185px;
   width : 36px;
   height : 30px;
   opacity: 0;
@@ -507,7 +547,7 @@ mask-image: url(sales-funnel.png);
   background-repeat : no-repeat;
   position : absolute;
   left : 482px;
-  top : 272px;
+  top : 281px;
   width : 36px;
   height : 30px;
   opacity: 0;
@@ -519,7 +559,7 @@ mask-image: url(sales-funnel.png);
   background-repeat : no-repeat;
   position : absolute;
   left : 482px;
-  top : 362px;
+  top : 380px;
   width : 36px;
   height : 30px;
   opacity: 0;
@@ -634,7 +674,7 @@ padding: 5em;
 </div> -->
 <div class="container">
 <div class="row">
-      <div id="info" class="col-md-6">
+      <div id="info" class="col-md-4">
         <div id="tab-1" class="tab-content">
         
           <div class="wistia_embed wistia_async_b8b5gp8tg1" style="height:298px;width:530px">&nbsp;</div>
@@ -688,7 +728,7 @@ padding: 5em;
 
         </div>
     </div>
-  <div  id="interactive" class="col-md-6" >
+  <div  id="interactive" class="col-md-8" >
        <div class="col-sm-12">
           <ul id="funnel" class="tabs">
            
@@ -775,8 +815,8 @@ padding: 5em;
           </ul>
           <div id="marketing-auto">
 
-                  <div class="vertical-line arrow3"></div>
-                  <div class="vertical-arrow arrow3"></div>
+                  <div class="vertical-line arrow4"></div>
+                  <div class="vertical-arrow arrow4"></div>
 
 <!--                   <div class="marketing arrow3">
                   <p>Marketing Automation</p>
@@ -818,9 +858,14 @@ padding: 5em;
                   <div  class="sales-badge circle funnel-5" data-toggle="tooltip" data-placement="right" title="Sales page"></div>
 
 
-                  <div  class="thankyou-arrow arrow1 funnel-5"></div>
-                  <div class="cart-arrow arrow1 funnel-5"></div>
-                  <div   class="thank_you-badge circle funnel-5" data-toggle="tooltip" data-placement="right" title="Thank you page"></div>
+                <div   class="shopping-badge circle funnel-6" data-toggle="tooltip" data-placement="right" title="Shopping cart abandoment email"></div> 
+                <div  class="shopping-arrow arrow2 funnel-7"></div>
+                <div  class="shopping2-arrow arrow3 funnel-6"></div>
+
+
+                  <div  class="thankyou-arrow arrow1 funnel-6"></div>
+<!--                   <div class="cart-arrow arrow1 funnel-7"></div> -->
+                  <div   class="thank_you-badge circle funnel-7" data-toggle="tooltip" data-placement="right" title="Thank you page"></div>
              
           </div>
 
@@ -854,12 +899,13 @@ $(function () {
 
       $( ".vertical-line" ).velocity({opacity: "0", height: "0px"});
       $( ".vertical-arrow" ).velocity({opacity: "0", translateY: "0px"});
-      $( ".vertical-line" ).velocity({opacity: "1", height: "475px"}, {duration: 4000});
-      $( ".vertical-arrow" ).velocity({opacity: "1", translateY: "470px"}, {duration: 4000});
+      $( ".vertical-line" ).velocity({opacity: "1", height: "595px"}, {duration: 3500});
+      $( ".vertical-arrow" ).velocity({opacity: "1", translateY: "590px"}, {duration: 3500});
       $( ".arrow1" ).velocity("transition.slideLeftIn", {delay: 1000, duration: 2000, stagger: 1500});
-      $( ".arrow2" ).velocity("transition.slideRightIn", {delay: 1000, duration: 2000,stagger: 500});
-      $( ".circle" ).velocity("transition.expandIn", {delay: 1000, duration: 1000, stagger: 500});
-      $( ".delay" ).velocity("transition.expandIn", { delay: 1000, duration: 1000, stagger: 500});
+      $( ".arrow2" ).velocity("transition.slideRightIn", {delay: 1000, duration: 2000,stagger: 400});
+      $( ".arrow3" ).velocity("transition.slideDownIn", {delay: 3000, duration: 1800});
+      $( ".circle" ).velocity("transition.expandIn", {delay: 1000, duration: 1000, stagger: 400});
+      $( ".delay" ).velocity("transition.expandIn", { delay: 1000, duration: 1000, stagger: 400});
   
   $('[data-toggle="tooltip"]').tooltip();
 
@@ -873,25 +919,32 @@ $(function () {
         $('.tab-content').velocity({opacity: "0"}, 10);
 
     var tab_id = $(this).attr('data-tab');
+    console.log(tab_id);
     $('#start').hide();
 
-    $('[class*=" arrow3"]').fadeOut();
+    $('[class*=" arrow4"]').fadeOut();
     
-    $('.funnel-1').velocity({marginTop: "2.5em", marginBottom: "2.5em" , opacity: '0.2'}, {duration: 400}, "ease");
+    $('.funnel-1').velocity({marginTop: "1em", marginBottom: "1em" , opacity: '0.2'}, {duration: 400}, "ease");
     $('.funnel-2').velocity({marginTop: "2.5em", marginBottom: "2.5em" , opacity: '0.2'}, {duration: 400}, "ease");
-    $('.funnel-3').velocity({marginTop: "2.5em", marginBottom: "2em" , opacity: '0.2'}, {duration: 400}, "ease");
-    $('.funnel-4').velocity({marginTop: "4em", marginBottom: "4em" , opacity: '0.2'}, {duration: 400}, "ease");
-    $('.funnel-5').velocity({marginTop: "5em", marginBottom: "5em" , opacity: '0.2'}, {duration: 400}, "ease");
-    $('ul.tabs li').velocity({marginTop: "0", marginBottom: "0", opacity: "0.9", scale: "1"}, {duration: 300}, "ease");
+    $('.funnel-3').velocity({marginTop: "4em", marginBottom: "2em" , opacity: '0.2'}, {duration: 400}, "ease");
+    $('.funnel-4').velocity({marginTop: "3.5em", marginBottom: "4em" , opacity: '0.2'}, {duration: 400}, "ease");
+    $('.funnel-5').velocity({marginTop: "4em", marginBottom: "4em" , opacity: '0.2'}, {duration: 400}, "ease");
+        $('.funnel-6').velocity({marginTop: "2em", marginBottom: "1em" , opacity: '0.2'}, {duration: 400}, "ease");
+            $('.funnel-7').velocity({marginTop: "1em", marginBottom: "1em" , opacity: '0.2'}, {duration: 400}, "ease");
+    
+    $('ul.tabs li:not(:last-child)').velocity({marginTop: "0", marginBottom: "0", opacity: "0.9", scale: "1"}, {duration: 300}, "ease");
+    $('ul.tabs li:last-child').velocity({marginTop: "5em", marginBottom: "0", opacity: "0.9", scale: "1"}, {duration: 300}, "ease");
 
 
 
     $(".funnel-" + tab_id + ".arrow1").fadeOut();
     $(".funnel-" + tab_id + ".arrow2").fadeOut();
+    $(".funnel-" + tab_id + ".arrow3").fadeOut();
 
     $(".funnel-" + tab_id + ".circle").velocity({scale: "1.1", opacity: '1'}, {duration: 500}, "ease");
     $(".funnel-" + tab_id + ".arrow1").velocity("transition.slideLeftIn");
     $(".funnel-" + tab_id + ".arrow2").velocity("transition.slideRightIn");
+    $(".funnel-" + tab_id + ".arrow3").velocity("transition.slideDownIn");
 
     $('ul.tabs li').removeClass('current');
     
@@ -904,7 +957,27 @@ $(function () {
 
     // $(".border-" + tab_id).velocity("transition.fadeIn", {duration: 500}, "ease");
 
-    $(this).velocity({marginTop: "2.5em", marginBottom: "2.5em", opacity: '1', scale: "1.1"}, {duration: 500}, "ease");
+
+
+
+
+
+
+    if(tab_id == 6){
+        $(this).velocity({marginTop: "2em", marginBottom: "2em", opacity: '1', scale: "1.1"}, {duration: 500}, "ease");
+        $('.funnel-7').velocity({marginTop: "2em"}, {duration: 400}, "ease");
+   
+    }else if(tab_id == 7){
+
+       $(this).velocity({marginTop: "7em", marginBottom: "2.5em", opacity: '1', scale: "1.1"}, {duration: 500}, "ease");
+       $('.funnel-6').velocity({marginTop: "0"}, {duration: 400}, "ease");
+
+
+    } else{
+        $(this).velocity({marginTop: "2.5em", marginBottom: "2.5em", opacity: '1', scale: "1.1"}, {duration: 500}, "ease");
+
+    }
+
 
     $("#tab-" + tab_id).addClass('current');
 
