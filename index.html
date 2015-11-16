@@ -809,6 +809,22 @@ padding-top: 5em;
             <h3>Make a Purchase</h3>
             <p>text insert some info here </p>
         </div>
+        <div id="tab-6" class="tab-content">
+                    <div class="wistia_embed wistia_async_b8b5gp8tg1" style="height:298px;width:530px">&nbsp;</div>
+            <div class="tab sales">
+            <h2><img src="shop-icon.png" class="icon">Sales Page</h2>
+          </div>
+            <h3>Shopping Cart</h3>
+            <p>text insert some info here </p>
+        </div>
+        <div id="tab-7" class="tab-content">
+                    <div class="wistia_embed wistia_async_b8b5gp8tg1" style="height:298px;width:530px">&nbsp;</div>
+            <div class="tab sales">
+            <h2><img src="shop-icon.png" class="icon">Sales Page</h2>
+          </div>
+            <h3>Thank you Page</h3>
+            <p>text insert some info here </p>
+        </div>
         <div id="start"class="col-sm-8">
           <div class="bottom-right">
             <h2>Evergreen Launch Product Funnel</h2>
@@ -1040,6 +1056,8 @@ $(function () {
     $('.funnel-5').velocity({marginTop: "1em", marginBottom: "1em" , opacity: '0.2'}, {duration: 400}, "ease");
     $('.funnel-6').velocity({marginTop: "2em", marginBottom: "2em" , opacity: '0.2'}, {duration: 400}, "ease");
     $('.funnel-7').velocity({marginTop: "0", marginBottom: "0" , opacity: '0.2'}, {duration: 400}, "ease");
+     $('.abandon-funnel').velocity({ opacity: '0.5'}, {duration: 400}, "ease");
+    
     
     $('ul.tabs li').velocity({marginTop: "1em", marginBottom: "1em", scale: "1"}, {duration: 300}, "ease");
     // $('ul.tabs li:last-child').velocity({marginTop: "5em", marginBottom: "0", opacity: "0.9", scale: "1"}, {duration: 300}, "ease");
@@ -1056,6 +1074,7 @@ $( ".vertical-line" ).velocity({opacity: "0", height: "0px"});
     $(".funnel-" + tab_id + ".arrow1").fadeOut();
     $(".funnel-" + tab_id + ".arrow2").fadeOut();
     $(".funnel-" + tab_id + ".arrow3").fadeOut();
+
     $(".funnel-" + tab_id + ".circle").velocity({scale: "1.1", opacity: '1'}, {duration: 500}, "ease");
   
     // $(".funnel-" + tab_id + ".arrow1").velocity("transition.slideLeftIn");
@@ -1256,6 +1275,8 @@ else if(tab_id == 5){
 $(".funnel-5").velocity({opacity: '1'}, {duration: 500}, "ease");
     $(this).velocity({marginTop: "2em", marginBottom: "2em", opacity: '1', scale: "1.1"}, {duration: 500}, "ease");
     $(".shopping2-arrow").velocity("transition.slideDownIn", {delay: 300});
+     $('.abandon-funnel').velocity({ opacity: '1'}, {delay: 300, duration: 400}, "ease");
+    
     $(".no").velocity("transition.slideDownIn", {delay: 300});
     $('.funnel-' + 6 + ".circle").velocity({scale: "1.1", opacity: '1'}, {delay: 400, duration: 400}, "ease");
     $(".thankyou-arrow").velocity("transition.slideLeftIn", {delay: 500});
@@ -1279,6 +1300,9 @@ $(".funnel-5").velocity({opacity: '1'}, {duration: 500}, "ease");
     else if(tab_id == 7){
 
 $('.funnel-' + 6 + ".arrow2").velocity({marginTop: "0"}, {duration: 400}, "ease");
+     $('.abandon-funnel').velocity({ opacity: '1'}, {duration: 400}, "ease");
+     $('.arrow-up').velocity({marginTop: "0em"}, {duration: 400}, "ease");
+
 $('.funnel-' + 6 + ".arrow1").velocity({marginTop: "0em"}, {duration: 400}, "ease");
 $('.funnel-' + 6 + ".circle").velocity({marginTop: "0em"}, {duration: 400}, "ease");
 $('.funnel-' + 6 + ".no").velocity({marginTop: "0em"}, {duration: 400}, "ease");
