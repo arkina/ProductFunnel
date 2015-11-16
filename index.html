@@ -62,10 +62,14 @@ ul.tabs li{
   opacity: 0;
   margin-top: 1em;
   margin-bottom: 1em;
+  cursor: pointer;
 }
 
 ul.tabs li.current{
     border-bottom: 5px solid aliceblue;
+    pointer-events: none;
+
+
   /*` */
 }
 .tabs{
@@ -152,7 +156,7 @@ ul.tabs li.current{
   font-size: 10px;
   text-transform: uppercase;
   color: #fff;
-  padding-top: 1.5em;
+  padding-top: 0.5em;
   margin-left: -12px;
     -webkit-transition: background 450ms ease;
   -moz-transition: background 450ms ease;
@@ -167,7 +171,7 @@ ul.tabs li.current{
 }
 
 .default-state.smaller{
-  padding-top: 4.5em;
+  padding-top: 3.6em;
   margin-left: -5px;
   font-size: 10px;
   color:#5A5A5A;
@@ -296,8 +300,9 @@ mask-image: url(sales-funnel.png);
 
 .abandon-funnel
 {
+  pointer-events: none;
 background-color: #E4E4E4;
-
+opacity: 1;
 -webkit-mask-image: url(abandon.png);
 mask-image: url(abandon.png);
   position : relative;
@@ -426,8 +431,8 @@ mask-image: url(sales-funnel.png);
   background-image : url(thankyou-arrow.png);
   background-repeat : no-repeat;
     position: absolute;
-    left: 138px;
-    top: 634px;
+    left: 212px;
+    top: 671px;
     width: 281px;
     height: 62px;
     opacity: 0;
@@ -477,7 +482,7 @@ mask-image: url(sales-funnel.png);
   background-image : url(thank_you-badge.png);
   background-repeat : no-repeat;
   position : absolute;
-    left: 422px;
+    left: 407px;
     top: 665px;
     width: 31px;
     height: 32px;
@@ -539,7 +544,7 @@ background-image: url(arrow_03.png);
 .shopping2-arrow{
   border-left: 2px solid #FF9801;
   position : absolute;
-    left: 194px;
+    left: 174px;
     top: 517px;
     width: 80px;
     height: 133px;
@@ -550,24 +555,36 @@ background-image: url(arrow_03.png);
     background-image: url(arrow_down_2.png);
     background-repeat: no-repeat;
     position: absolute;
-    left: 186px;
+    left: 165px;
     top: 683px;
     width: 80px;
     height: 80px;
     opacity: 0;
 }
 
+.arrow-up{
+
+    background-image: url(arrow-up.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 288px;
+    top: 583px;
+    width: 300px;
+    height: 400px;
+    opacity: 0;
+}
+
 .yes{
 
     position: absolute;
-    left: 216px;
-    top: 724px;
+    left: 192px;
+    top: 721px;
     opacity: 0;
 }
 .no{
     position: absolute;
-    left: 243px;
-    top:694px;
+    left: 236px;
+    top:692px;
     opacity: 0;
 }
 /*TIME DELAY TEXT */
@@ -664,8 +681,7 @@ mask-image: url(arrowhead-img.png);
 
 #funnel{
   z-index: 1;
-  pointer: cursor;
-
+  padding-left: 2em;
 }
 
 .tooltip{  font-size: 12px;
@@ -710,7 +726,7 @@ padding-top: 5em;
 
 }
 #marketing-auto{
-  margin-left: 1em;
+  /*margin-left: 2em;*/
   position: relative;
 }
 
@@ -807,7 +823,8 @@ padding-top: 5em;
 
               <div class="cube 1 flip-to-top">
                 <div class="default-state">
-                    <h2>Opt-in</h2>
+                    <h2><h4>Opt-in Page</h4><p>through facebook ads, retargeting ads, email etc.</p></h2>
+                    
        <!--              <img src="email-icon.png" class="icon"> -->
                 </div>
                 <div class="active-state optin">
@@ -819,7 +836,8 @@ padding-top: 5em;
             <li class="tab-link video1-funnel" data-tab="2">   
               <div class="cube 2 flip-to-top">
                 <div class="default-state">
-                    <h2>Video #1</h2>
+                    <h2><h4>Video #1 Page</h4><p>Introduce your product and build interest</p></h2>
+                    
        <!--              <img src="vid1-icon.png" class="icon"> -->
                 </div>
                 <div class="active-state video">
@@ -830,7 +848,7 @@ padding-top: 5em;
             <li class="tab-link video2-funnel" data-tab="3">
               <div class="cube 3 flip-to-top">
                 <div class="default-state">
-                    <h2>Video #2</h2>
+                    <h2><h4>Video #2 Page</h4><p>Testimonials and Customer Reviews</p></h2>
            <!--          <img src="video-icon.png" class="icon"> -->
                 </div>
                 <div class="active-state video">
@@ -841,7 +859,7 @@ padding-top: 5em;
             <li class="tab-link video3-funnel" data-tab="4">
               <div class="cube 4 flip-to-top">
                 <div class="default-state">
-                    <h2>Video #3</h2>
+                    <h2><h4>Video #3 Page</h4><p>Show your product in action</p></h2>
                <!--      <img src="video-icon.png" class="icon"> -->
                 </div>
                 <div class="active-state video">
@@ -852,7 +870,7 @@ padding-top: 5em;
             <li class="tab-link sales-funnel" data-tab="5">
               <div class="cube 5 flip-to-top">
                 <div class="default-state">
-                    <h2>Sale</h2>
+                    <h2><h4>Sale</h4><p>Introduce pricing<br>and sell</p></h2>
       <!--               <img src="shop-icon.png" class="icon"> -->
                 </div>
                 <div class="active-state sales">
@@ -870,17 +888,15 @@ padding-top: 5em;
                     <span>Opt-In through ads</span>
                 </div>
               </div>
-            </li>
-            <li class="tab-link abandon-funnel" data-tab="6">
-              <div class="cube 5 flip-to-top">
-                <div class="default-state smaller">
-                    <p>Abandoned?</p>
-      <!--               <img src="shop-icon.png" class="icon"> -->
-                </div>
-                <div class="active-state smaller">
-                    <span>Yes or No</span>
-                </div>
-              </div>
+            
+                <li class="abandon-funnel">
+                  <div class="cube 5">
+                    <div class="default-state smaller">
+                        <p>Have they<br>converted?</p>
+          <!--               <img src="shop-icon.png" class="icon"> -->
+                    </div>
+                  </div>
+                </li>
             </li>
             <li class="tab-link thankyou-funnel" data-tab="7">
               <div class="cube 5 flip-to-top">
@@ -900,10 +916,10 @@ padding-top: 5em;
                   <div class="vertical-arrow arrow4"></div>
 
                   <div class="yes arrow3 funnel-6">
-                  <p>no</p>
+                  <p>yes</p>
                   </div>
                   <div class="no arrow3 funnel-6">
-                  <p>yes</p>
+                  <p>no</p>
                   </div>
 
                     <!-- <div class="border-1"></div> -->
@@ -911,14 +927,14 @@ padding-top: 5em;
                     <div class="optin-arrow arrow1 funnel-1"></div>
                     <div class="optin-badge circle funnel-1"  data-toggle="tooltip" data-placement="right" title="Opt-in form"></div>
          
-                  <div class="day1-text delay funnel-2"></div>
+                  <div class="day1-text delay"></div>
                      
                     <!--  <div class="border-2"></div> -->
                 
                     <div class="vid1-arrow arrow2 funnel-2"></div>
                     <div class="video1-badge circle funnel-2" data-toggle="tooltip" data-placement="right" title="Video 1"></div>
       
-                  <div class="day3-text delay funnel-3"></div>
+                  <div class="day3-text delay"></div>
 
                   <!-- <div class="border-3"></div> -->
 
@@ -926,7 +942,7 @@ padding-top: 5em;
                   <div class="video2-badge circle funnel-3" data-toggle="tooltip" data-placement="right" title="Video 2"></div>
                
 
-                  <div class="day6-text delay funnel-4"></div>
+                  <div class="day6-text delay"></div>
                   
                   <!-- <div class="border-4"></div> -->
 
@@ -934,7 +950,7 @@ padding-top: 5em;
                   <div  class="vid3-arrow arrow2 funnel-4"></div>
                   <div  class="video3-badge circle funnel-4" data-toggle="tooltip" data-placement="right" title="Video 3"></div>
  
-                  <div  class="day9-text delay funnel-5"></div>
+                  <div  class="day9-text delay"></div>
 
                   <!-- <div class="border-5"></div> -->
 
@@ -943,15 +959,16 @@ padding-top: 5em;
 
 
                 <div   class="shopping-badge circle funnel-6" data-toggle="tooltip" data-placement="right" title="Shopping cart abandoment email"></div> 
-                <div  class="shopping-arrow arrow2 funnel-7"></div>
+        
                 <div  class="shopping2-arrow arrow3 funnel-6"></div>
                 <div  class="shopping3-arrow arrow3 funnel-6"></div>
+                <div  class="arrow-up arrow3 funnel-6"></div>
 
 
                   <div  class="thankyou-arrow arrow1 funnel-6"></div>
 <!--                   <div class="cart-arrow arrow1 funnel-7"></div> -->
-                  <div   class="thank_you-badge circle funnel-7" data-toggle="tooltip" data-placement="right" title="Thank you page"></div>
-             
+<!--                   <div   class="thank_you-badge circle funnel-7" data-toggle="tooltip" data-placement="right" title="Thank you page"></div>
+              -->
           </div>
 
         </div>
@@ -998,7 +1015,6 @@ $(function () {
   return false;
 });
 
-
   $('ul.tabs li').click(function (e) {
     e.preventDefault();
         $('.tab-content').velocity({opacity: "0"}, 10);
@@ -1008,16 +1024,19 @@ $(function () {
     $('#start').hide();
 
     // $('[class*=" arrow4"]').fadeOut();
+
+     $('.delay').velocity({marginTop: "1em", marginBottom: "1em" , opacity: '0.2'}, {duration: 400}, "ease");
     
     $('.funnel-1').velocity({marginTop: "1em", marginBottom: "1em" , opacity: '0.2'}, {duration: 400}, "ease");
+
     $('.funnel-2').velocity({marginTop: "1em", marginBottom: "1em" , opacity: '0.2'}, {duration: 400}, "ease");
     $('.funnel-3').velocity({marginTop: "1em", marginBottom: "1em" , opacity: '0.2'}, {duration: 400}, "ease");
     $('.funnel-4').velocity({marginTop: "1em", marginBottom: "1em" , opacity: '0.2'}, {duration: 400}, "ease");
     $('.funnel-5').velocity({marginTop: "1em", marginBottom: "1em" , opacity: '0.2'}, {duration: 400}, "ease");
-    $('.funnel-6').velocity({marginTop: "1em", marginBottom: "1em" , opacity: '0.2'}, {duration: 400}, "ease");
+    $('.funnel-6').velocity({marginTop: "2em", marginBottom: "2em" , opacity: '0.2'}, {duration: 400}, "ease");
     $('.funnel-7').velocity({marginTop: "0", marginBottom: "0" , opacity: '0.2'}, {duration: 400}, "ease");
     
-    $('ul.tabs li').velocity({marginTop: "1em", marginBottom: "1em", opacity: "0.9", scale: "1"}, {duration: 300}, "ease");
+    $('ul.tabs li').velocity({marginTop: "1em", marginBottom: "1em", scale: "1"}, {duration: 300}, "ease");
     // $('ul.tabs li:last-child').velocity({marginTop: "5em", marginBottom: "0", opacity: "0.9", scale: "1"}, {duration: 300}, "ease");
 
     $('ul.tabs li').removeClass('current');
@@ -1025,64 +1044,246 @@ $(function () {
 
     $('.tab-content').removeClass('current');
 
-
 $( ".vertical-line" ).velocity({opacity: "0", height: "0px"});
-  $( ".vertical-arrow" ).velocity({opacity: "0", translateY: "0px"});
+  $( ".vertical-arrow" ).velocity({opacity: "0", translateY: "0"});
+
 
     $(".funnel-" + tab_id + ".arrow1").fadeOut();
     $(".funnel-" + tab_id + ".arrow2").fadeOut();
     $(".funnel-" + tab_id + ".arrow3").fadeOut();
     $(".funnel-" + tab_id + ".circle").velocity({scale: "1.1", opacity: '1'}, {duration: 500}, "ease");
   
-    $(".funnel-" + tab_id + ".arrow1").velocity("transition.slideLeftIn");
-    $(".funnel-" + tab_id + ".arrow2").velocity("transition.slideRightIn");
-    $(".funnel-" + tab_id + ".arrow3").velocity("transition.slideDownIn");
+    // $(".funnel-" + tab_id + ".arrow1").velocity("transition.slideLeftIn");
+    // $(".funnel-" + tab_id + ".arrow2").velocity("transition.slideRightIn");
+    // $(".funnel-" + tab_id + ".arrow3").velocity("transition.slideDownIn");
 
 
 
-    $(".funnel-" + tab_id + ".delay").velocity({opacity: '1'}, {duration: 500}, "ease");
+
+    // $(".day-" + tab_id + ".delay").velocity({opacity: '1'}, {duration: 500}, "ease");
 
    $(this).addClass('current');
 
+    $(this).velocity({marginTop: "2em", marginBottom: "2em", opacity: '1', scale: "1.1"}, {duration: 500}, "ease");
     // $(".border-" + tab_id).velocity("transition.fadeIn", {duration: 500}, "ease");
+if(tab_id == 1){
+$(".funnel-" + tab_id + ".arrow1").velocity("transition.slideLeftIn");
+}
+ else if(tab_id == 2){
 
- if(tab_id == 2){
+      
+      $(".funnel-" + 1 + ".circle").velocity({scale: "1.1", opacity: '1'}, {duration: 500}, "ease");
+      
+      $( ".vertical-line" ).velocity({opacity: "1", height: "135px"}, {duration: 1000});
+      $( ".vertical-arrow" ).velocity({opacity: "1", translateY: "135px"}, {duration: 1000});
+
+      $('.day1-text').velocity({opacity: '1'}, {delay: 300, duration: 500}, "ease");
+    
+
+      $(".funnel-" + tab_id + ".circle").velocity({scale: "1.1", opacity: '1'}, {delay: 600, duration: 500}, "ease");
+      $(".funnel-" + tab_id + ".arrow2").velocity("transition.slideRightIn", {delay: 600});
+          
+      $('.funnel-1').velocity({opacity: '0.2'}, {delay: 500, duration: 500}, "ease");
+      $('.arrow4').velocity({opacity: '0'}, { duration: 500}, "ease");
+      $('.day1-text').velocity({opacity: '0.2'}, {delay: 500, duration: 500}, "ease");
 
 
-      $('.funnel-1').velocity("transition.fadeIn", {duration: 400}, "ease");
-      $( ".vertical-line" ).velocity({opacity: "1", height: "200px"}, {duration: 600});
-  
-      $( ".vertical-arrow" ).velocity({opacity: "1", translateY: "200px"}, {duration: 600});
-      $(".funnel-" + tab_id + ".circle").velocity({scale: "1.1", opacity: '1'}, {duration: 500}, "ease");
+
       
 }
 
 
 else if(tab_id == 3){
+
+    $( ".vertical-line" ).velocity({opacity: "1", height: "235px"}, {duration: 1200});
+
+  
+    $( ".vertical-arrow" ).velocity({opacity: "1", translateY: "235px"}, {duration: 1200});
+
+    $('.arrow4').velocity({opacity: '0'}, { duration: 500}, "ease");
+
+ 
+    $(".funnel-" + 1 + ".circle").velocity({scale: "1.1", opacity: '1'}, {duration: 500}, "ease");
+
+    $('.day1-text').velocity({opacity: '1'}, {delay: 150, duration: 500}, "ease");
+
+
+    $(".funnel-" + 2 + ".circle").velocity({scale: "1.1", opacity: '1'}, {delay: 300, duration: 500}, "ease");
+      
+    $('.day3-text').velocity({opacity: '1'}, {delay:500, duration: 500}, "ease");
+
+
+
+     $(".funnel-" + tab_id + ".arrow2").velocity("transition.slideRightIn", {delay: 800});
+    
+
+    
+
+      $(".funnel-" + tab_id + ".circle").velocity({scale: "1.1", opacity: '1'}, {delay: 800, duration: 500}, "ease");
+    
+   
+          
+      
+
+    $('.funnel-1').velocity({opacity: '0.2'}, {delay: 800, duration: 500}, "ease");
+    
+    $('.day1-text').velocity({opacity: '0.2'}, {delay: 800, duration: 500}, "ease");
+     $('.funnel-2').velocity({opacity: '0.2'}, {delay: 700, duration: 500}, "ease");
+
+     $('.day3-text').velocity({opacity: '0.2'}, {delay: 700, duration: 500}, "ease");
+      
 }
 
 
 else if(tab_id == 4){
+    $( ".vertical-line" ).velocity({opacity: "1", height: "335px"}, {duration: 1500});
+
+  
+    $( ".vertical-arrow" ).velocity({opacity: "1", translateY: "335px"}, {duration: 1500});
+
+    $('.arrow4').velocity({opacity: '0'}, "ease");
+
+ 
+    $(".funnel-" + 1 + ".circle").velocity({scale: "1.1", opacity: '1'}, "ease");
+
+    $('.day1-text').velocity({opacity: '1'}, {delay: 150} ,"ease");
+
+    $(".funnel-" + 2 + ".circle").velocity({scale: "1.1", opacity: '1'}, {delay: 300, duration: 500}, "ease");
+      
+
+    $('.day3-text').velocity({opacity: '1'}, {delay: 500, duration: 500}, "ease");
+
+
+    $(".funnel-" + 3 + ".circle").velocity({scale: "1.1", opacity: '1'}, { delay: 650, duration: 500}, "ease");
+    
+    $('.day6-text').velocity({opacity: '1'}, {delay: 800, duration: 500}, "ease");
+
+    
+
+    $(".funnel-" + tab_id + ".arrow2").velocity("transition.slideRightIn", {delay: 900});
+
+
+
+
+
+
+    $(".funnel-" + tab_id + ".circle").velocity({scale: "1.1", opacity: '1'}, {delay: 900, duration: 500}, "ease");
+    
+
+
+    $('.funnel-1').velocity({opacity: '0.2'}, { duration: 500}, "ease");
+    
+    $('.day1-text').velocity({opacity: '0.2'}, { duration: 500}, "ease");
+
+    $('.funnel-2').velocity({opacity: '0.2'}, {duration: 500}, "ease");
+    
+    $('.day3-text').velocity({opacity: '0.2'}, { duration: 500}, "ease");
+      
+    $('.funnel-3').velocity({opacity: '0.2'}, { duration: 500}, "ease");
+          
+      $('.day6-text').velocity({opacity: '0.2'}, { duration: 500}, "ease");
+
+
 }
 
 else if(tab_id == 5){
+
+    $( ".vertical-line" ).velocity({opacity: "1", height: "445px"}, {duration: 2000});
+
+  
+    $( ".vertical-arrow" ).velocity({opacity: "1", translateY: "445px"}, {duration: 2000});
+
+    $('.arrow4').velocity({opacity: '0'}, "ease");
+
+ 
+    $(".funnel-" + 1 + ".circle").velocity({scale: "1.1", opacity: '1'}, "ease");
+
+    $('.day1-text').velocity({opacity: '1'}, {delay: 150} ,"ease");
+
+    $(".funnel-" + 2 + ".circle").velocity({scale: "1.1", opacity: '1'}, {delay: 300, duration: 500}, "ease");
+      
+
+    $('.day3-text').velocity({opacity: '1'}, {delay: 500, duration: 500}, "ease");
+
+
+    $(".funnel-" + 3 + ".circle").velocity({scale: "1.1", opacity: '1'}, { delay: 650, duration: 500}, "ease");
+    
+    $('.day6-text').velocity({opacity: '1'}, {delay: 800, duration: 500}, "ease");
+
+
+    $(".funnel-" + 4 + ".circle").velocity({scale: "1.1", opacity: '1'}, { delay: 1000, duration: 500}, "ease");
+    
+    $('.day9-text').velocity({opacity: '1'}, {delay: 1150, duration: 500}, "ease");
+
+    
+
+    $(".funnel-" + tab_id + ".arrow2").velocity("transition.slideRightIn", {delay: 1200});
+
+    $(".funnel-" + tab_id + ".circle").velocity({scale: "1.1", opacity: '1'}, {delay: 1200, duration: 500}, "ease");
+    
+
+
+    $('.funnel-1').velocity({opacity: '0.2'}, {delay: 1000, duration: 500}, "ease");
+    
+    $('.day1-text').velocity({opacity: '0.2'}, { delay: 1000,duration: 500}, "ease");
+
+    $('.funnel-2').velocity({opacity: '0.2'}, {delay: 1000,duration: 500}, "ease");
+    
+    $('.day3-text').velocity({opacity: '0.2'}, { delay: 1000,duration: 500}, "ease");
+      
+    $('.funnel-3').velocity({opacity: '0.2'}, { delay: 1000,duration: 500}, "ease");
+          
+      $('.day6-text').velocity({opacity: '0.2'}, { delay: 1000,duration: 500}, "ease");
+          $('.funnel-4').velocity({opacity: '0.2'}, {delay: 1000, duration: 500}, "ease");
+          
+      $('.day9-text').velocity({opacity: '0.2'}, {delay: 1000, duration: 500}, "ease");
+
+
+
+
+
+
+
 }
 
     else if(tab_id == 6){
-        $(this).velocity({marginTop: "2em", marginBottom: "2em", opacity: '1', scale: "1.1"}, {duration: 500}, "ease");
+
+$(".funnel-5").velocity({opacity: '1'}, {duration: 500}, "ease");
+    $(this).velocity({marginTop: "2em", marginBottom: "2em", opacity: '1', scale: "1.1"}, {duration: 500}, "ease");
+    $(".shopping2-arrow").velocity("transition.slideDownIn", {delay: 300});
+    $(".no").velocity("transition.slideDownIn", {delay: 300});
+    $('.funnel-' + 6 + ".circle").velocity({scale: "1.1", opacity: '1'}, {delay: 400, duration: 400}, "ease");
+    $(".thankyou-arrow").velocity("transition.slideLeftIn", {delay: 500});
+    $(".arrow-up").velocity("transition.slideUpIn", {delay: 700});
+    // $(".abandon-funnel").velocity("callout.bounce", {delay: 800});
+    $(".shopping3-arrow").velocity("transition.slideDownIn", {delay: 1000});
+    $(".yes").velocity("transition.slideDownIn", {delay: 1000});
+
+    
+
+    
+
+
+// $(".funnel-" + 6+ ".arrow3").velocity("transition.slideDownIn", {delay: 1500, duration: 500}, "ease");
   
         $('.funnel-7').velocity({marginTop: "2em"}, {duration: 400}, "ease");
    
-    }else if(tab_id == 7){
-
-       $(this).velocity({marginTop: "1em", marginBottom: "2em", opacity: '1', scale: "1.1"}, {duration: 500}, "ease");
-       $('.funnel-6').velocity({marginTop: "0"}, {duration: 400}, "ease");
+    }
 
 
-    } else{
-        $(this).velocity({marginTop: "2.5em", marginBottom: "2.5em", opacity: '1', scale: "1.1"}, {duration: 500}, "ease");
+    else if(tab_id == 7){
 
-  
+$('.funnel-' + 6 + ".arrow2").velocity({marginTop: "0"}, {duration: 400}, "ease");
+$('.funnel-' + 6 + ".arrow1").velocity({marginTop: "0em"}, {duration: 400}, "ease");
+$('.funnel-' + 6 + ".circle").velocity({marginTop: "0em"}, {duration: 400}, "ease");
+$('.funnel-' + 6 + ".no").velocity({marginTop: "0em"}, {duration: 400}, "ease");
+      $(".funnel-5").velocity({opacity: '1'}, {duration: 500}, "ease");
+
+    $(".shopping2-arrow").velocity("transition.slideDownIn", {delay: 300});
+    $(".shopping3-arrow").velocity("transition.slideDownIn", {delay: 400});
+    $(".yes").velocity("transition.slideDownIn", {delay: 400});
+
+       $(this).velocity({marginTop: "3em", marginBottom: "2em", opacity: '1', scale: "1.1"}, {duration: 500}, "ease");
 
 
     }
