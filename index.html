@@ -53,8 +53,8 @@ li{
 }
 
 ul{ 
-  padding-top: 2em;
-  list-style: none;
+  list-style: none; 
+  padding-top: 0em;
  margin:0;
 
 }
@@ -71,6 +71,11 @@ ul.tabs li.current{
 
 
   /*` */
+}
+h3 {
+  font-family: "Helvetica", sans-serif;
+    line-height: 1.3;
+    font-weight: 200;
 }
 .tabs{
 
@@ -687,6 +692,7 @@ mask-image: url(arrowhead-img.png);
 #funnel{
   z-index: 1;
   padding-left: 2em;
+  padding-top: 2em;
 }
 
 .tooltip{  font-size: 12px;
@@ -709,8 +715,8 @@ mask-image: url(arrowhead-img.png);
 #interactive{
   opacity: 1;
   position: relative;
-  height: 600px;
-  padding-top: 5em;
+  min-height: 600px;
+
 /*        -ms-transform: scale(0.9,0.9);
     -webkit-transform: scale(0.9,0.9); 
     transform: scale(0.9,0.9);*/
@@ -722,10 +728,12 @@ mask-image: url(arrowhead-img.png);
 #info{
 opacity: 1;
 position: relative;
-min-height: 600px;
+min-height: 400px;
 /*height: 600px;*/
 height: auto;
-padding-top: 5em;
+
+/*top: -40px;*/
+
 
 }
 
@@ -826,10 +834,10 @@ padding-top: 5em;
         </div>
         <div id="start"class="col-sm-8">
           <div class="bottom-right">
-            <h2>Evergreen Launch Product Funnel</h2>
-            <p> Welcome to this interactive Product Funnel. Its is here to explain how the funnel works.
+            <h1>Evergreen Launch Product Funnel</h1>
+            <h3> Welcome to this interactive Product Funnel. Its is here to explain how the funnel works.
               Feel free to play around with the funnel and have fun. Each part of the funnel has videos
-              explaining each part and how to make it happen with Wishpond!</p>
+              explaining each part and how to make it happen with Wishpond!</h3>
           </div>
 
         </div>
@@ -1047,13 +1055,13 @@ $(function () {
 
      $('.delay').velocity({marginTop: "1em", marginBottom: "1em" , opacity: '0.2'}, {duration: 400}, "ease");
     
-    $('.funnel-1').velocity({marginTop: "1em", marginBottom: "1em" , opacity: '0.2'}, {duration: 400}, "ease");
+    $('.funnel-1').velocity({marginTop: "0em", marginBottom: "1em" , opacity: '0.2'}, {duration: 400}, "ease");
 
     $('.funnel-2').velocity({marginTop: "1em", marginBottom: "1em" , opacity: '0.2'}, {duration: 400}, "ease");
     $('.funnel-3').velocity({marginTop: "1em", marginBottom: "1em" , opacity: '0.2'}, {duration: 400}, "ease");
     $('.funnel-4').velocity({marginTop: "1em", marginBottom: "1em" , opacity: '0.2'}, {duration: 400}, "ease");
     $('.funnel-5').velocity({marginTop: "1em", marginBottom: "1em" , opacity: '0.2'}, {duration: 400}, "ease");
-    $('.funnel-6').velocity({marginTop: "2em", marginBottom: "2em" , opacity: '0.2'}, {duration: 400}, "ease");
+    $('.funnel-6').velocity({marginTop: "0em", marginBottom: "0em" , opacity: '0.2'}, {duration: 400}, "ease");
     $('.funnel-7').velocity({marginTop: "0", marginBottom: "0" , opacity: '0.2'}, {duration: 400}, "ease");
      $('.abandon-funnel').velocity({ opacity: '0.5'}, {duration: 400}, "ease");
     
@@ -1169,21 +1177,21 @@ else if(tab_id == 4){
  
     $(".funnel-" + 1 + ".circle").velocity({scale: "1.1", opacity: '1'}, "ease");
 
-    $('.day1-text').velocity({opacity: '1'}, {delay: 150} ,"ease");
+    $('.day1-text').velocity({opacity: '1'}, {delay: 250} ,"ease");
 
-    $(".funnel-" + 2 + ".circle").velocity({scale: "1.1", opacity: '1'}, {delay: 300, duration: 500}, "ease");
+    $(".funnel-" + 2 + ".circle").velocity({scale: "1.1", opacity: '1'}, {delay: 450, duration: 500}, "ease");
       
 
-    $('.day3-text').velocity({opacity: '1'}, {delay: 500, duration: 500}, "ease");
+    $('.day3-text').velocity({opacity: '1'}, {delay: 600, duration: 500}, "ease");
 
 
-    $(".funnel-" + 3 + ".circle").velocity({scale: "1.1", opacity: '1'}, { delay: 650, duration: 500}, "ease");
+    $(".funnel-" + 3 + ".circle").velocity({scale: "1.1", opacity: '1'}, { delay: 750, duration: 500}, "ease");
     
-    $('.day6-text').velocity({opacity: '1'}, {delay: 800, duration: 500}, "ease");
+    $('.day6-text').velocity({opacity: '1'}, {delay: 1000, duration: 500}, "ease");
 
     
 
-    $(".funnel-" + tab_id + ".arrow2").velocity("transition.slideRightIn", {delay: 900});
+    $(".funnel-" + tab_id + ".arrow2").velocity("transition.slideRightIn", {delay: 1200});
 
 
 
@@ -1272,6 +1280,7 @@ else if(tab_id == 5){
     else if(tab_id == 6){
 
 $(".funnel-5").velocity({opacity: '1'}, {duration: 500}, "ease");
+
     $(this).velocity({marginTop: "2em", marginBottom: "2em", opacity: '1', scale: "1.1"}, {duration: 500}, "ease");
     $(".shopping2-arrow").velocity("transition.slideDownIn", {delay: 300});
      $('.abandon-funnel').velocity({ opacity: '1'}, {delay: 300, duration: 400}, "ease");
