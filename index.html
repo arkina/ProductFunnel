@@ -174,7 +174,7 @@ ul.tabs li.current{
   padding-top: 3.6em;
   margin-left: -5px;
   font-size: 10px;
-  color:#5A5A5A;
+  color:white;
 }
 .active-state {
   font-size: 12px;
@@ -301,10 +301,10 @@ mask-image: url(sales-funnel.png);
 .abandon-funnel
 {
   pointer-events: none;
-background-color: #E4E4E4;
+/*background-color: #E4E4E4;*/
 opacity: 1;
--webkit-mask-image: url(abandon.png);
-mask-image: url(abandon.png);
+background-image: url(abandon.png);
+/*mask-image: url(abandon.png);*/
   position : relative;
 /*  left : 96px;*/
 /*  top : 373px;*/
@@ -767,8 +767,7 @@ padding-top: 5em;
 <div class="row">
       <div id="info" class="col-md-6">
         <div id="tab-1" class="tab-content">
-        
-           <div class="wistia_responsive_padding" style="padding:0 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;width:100%;"><div class="wistia_embed wistia_async_fhe9t0365i videoFoam=true" style="height:100%;width:100%">&nbsp;</div></div></div>
+          <div class="wistia_embed wistia_async_b8b5gp8tg1" style="height:298px;width:530px">&nbsp;</div>
           <div class="tab optin">
             
             <h2><img src="email-icon.png" class="icon">Opt-in</h2>
@@ -1300,19 +1299,17 @@ $(".funnel-5").velocity({opacity: '1'}, {duration: 500}, "ease");
     else if(tab_id == 7){
 
 $('.funnel-' + 6 + ".arrow2").velocity({marginTop: "0"}, {duration: 400}, "ease");
-     $('.abandon-funnel').velocity({ opacity: '1'}, {duration: 400}, "ease");
-     $('.arrow-up').velocity({marginTop: "0em"}, {duration: 400}, "ease");
-
+$('.abandon-funnel').velocity({ opacity: '1'}, {duration: 400}, "ease");
+$('.arrow-up').velocity({marginTop: "0em"}, {duration: 400}, "ease");
 $('.funnel-' + 6 + ".arrow1").velocity({marginTop: "0em"}, {duration: 400}, "ease");
 $('.funnel-' + 6 + ".circle").velocity({marginTop: "0em"}, {duration: 400}, "ease");
 $('.funnel-' + 6 + ".no").velocity({marginTop: "0em"}, {duration: 400}, "ease");
-      $(".funnel-5").velocity({opacity: '1'}, {duration: 500}, "ease");
+$(".funnel-5").velocity({opacity: '1'}, {duration: 500}, "ease");
+$(".shopping2-arrow").velocity("transition.slideDownIn", {delay: 300});
+$(".shopping3-arrow").velocity("transition.slideDownIn", {delay: 400});
+$(".yes").velocity("transition.slideDownIn", {delay: 400});
 
-    $(".shopping2-arrow").velocity("transition.slideDownIn", {delay: 300});
-    $(".shopping3-arrow").velocity("transition.slideDownIn", {delay: 400});
-    $(".yes").velocity("transition.slideDownIn", {delay: 400});
-
-       $(this).velocity({marginTop: "3em", marginBottom: "2em", opacity: '1', scale: "1.1"}, {duration: 500}, "ease");
+$(this).velocity({marginTop: "4em", marginBottom: "2em", opacity: '1', scale: "1.1"}, {duration: 500}, "ease");
 
 
     }
