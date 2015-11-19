@@ -40,9 +40,15 @@
         width: 100%;
 }
 #info{
-  left: 0em!important;
-  margin: 0 auto;
+  left: 0em !important;
 }
+
+.row.info{
+  position: relative!important;
+
+}
+
+
     }
 
     /* Small Devices, Tablets */
@@ -52,8 +58,12 @@
     width: 100%;
 }
 #info{
-  left: 0em!important;
-  margin: 0 auto;
+  left: 0em !important;
+}
+
+.row.info{
+  position: relative!important;
+
 }
 
     }
@@ -64,7 +74,10 @@
       .col-md-6 {
     width: 100%;
 }
+.row.info{
+  position: relative!important;
 
+}
     }
 
     /* Custom, iPhone Retina */ 
@@ -72,6 +85,9 @@
 
       .col-md-6 {
     width: 100%;
+}
+.row.info{
+  position: relative!important;
 }
         
     }
@@ -406,6 +422,18 @@ mask-image: url(sales-funnel.png);
   height : 46px;
   opacity: 0;
       cursor: pointer;
+  -webkit-transition: opacity 200ms ease;
+  -moz-transition: opacity 200ms ease;
+  -o-transition: opacity 200ms ease;
+  transition: opacity 200ms ease;
+}
+
+.optin-badge:hover{
+  opacity: 1!important;
+      -webkit-transition: opacity 450ms ease;
+  -moz-transition: opacity 450ms ease;
+  -o-transition: opacity 450ms ease;
+  transition: opacity 450ms ease;
 }
 .optin-arrow
 {
@@ -445,8 +473,19 @@ mask-image: url(sales-funnel.png);
   height : 32px;
   opacity: 0;
       cursor: pointer;
+        -webkit-transition: opacity 200ms ease;
+  -moz-transition: opacity 200ms ease;
+  -o-transition: opacity 200ms ease;
+  transition: opacity 200ms ease;
 }
 
+.video2-badge:hover{
+  opacity: 1!important;
+      -webkit-transition: opacity 450ms ease;
+  -moz-transition: opacity 450ms ease;
+  -o-transition: opacity 450ms ease;
+  transition: opacity 450ms ease;
+}
 .vid2-arrow
 {
   background-image : url(vid2-arrow.png);
@@ -470,9 +509,19 @@ mask-image: url(sales-funnel.png);
   width : 31px;
   height : 32px;
       cursor: pointer;
+        -webkit-transition: opacity 200ms ease;
+  -moz-transition: opacity 200ms ease;
+  -o-transition: opacity 200ms ease;
+  transition: opacity 200ms ease;
 }
 
-
+.video2-badge:hover{
+  opacity: 1!important;
+      -webkit-transition: opacity 450ms ease;
+  -moz-transition: opacity 450ms ease;
+  -o-transition: opacity 450ms ease;
+  transition: opacity 450ms ease;
+}
 .vid3-arrow
 {
   background-image : url(vid3-arrow.png);
@@ -495,6 +544,18 @@ mask-image: url(sales-funnel.png);
   height : 31px;
   opacity: 0;
       cursor: pointer;
+        -webkit-transition: opacity 200ms ease;
+  -moz-transition: opacity 200ms ease;
+  -o-transition: opacity 200ms ease;
+  transition: opacity 200ms ease;
+}
+
+.video3-badge:hover{
+  opacity: 1!important;
+      -webkit-transition: opacity 450ms ease;
+  -moz-transition: opacity 450ms ease;
+  -o-transition: opacity 450ms ease;
+  transition: opacity 450ms ease;
 }
 .thankyou-arrow
 {
@@ -521,6 +582,18 @@ mask-image: url(sales-funnel.png);
     height: 32px;
   opacity: 0;
       cursor: pointer;
+        -webkit-transition: opacity 200ms ease;
+  -moz-transition: opacity 200ms ease;
+  -o-transition: opacity 200ms ease;
+  transition: opacity 200ms ease;
+}
+
+.thank_you-badge:hover{
+  opacity: 1!important;
+      -webkit-transition: opacity 450ms ease;
+  -moz-transition: opacity 450ms ease;
+  -o-transition: opacity 450ms ease;
+  transition: opacity 450ms ease;
 }
 
 .thank_you_1_
@@ -559,8 +632,19 @@ mask-image: url(sales-funnel.png);
     height: 50px;
     opacity: 0;
     cursor: pointer;
+      -webkit-transition: opacity 200ms ease;
+  -moz-transition: opacity 200ms ease;
+  -o-transition: opacity 200ms ease;
+  transition: opacity 200ms ease;
 }
 
+.shopping-badge:hover{
+  opacity: 1!important;
+      -webkit-transition: opacity 450ms ease;
+  -moz-transition: opacity 450ms ease;
+  -o-transition: opacity 450ms ease;
+  transition: opacity 450ms ease;
+}
 .shopping-badge p
 {
 margin-left: 4em;
@@ -590,8 +674,18 @@ margin-left: 4em;
   height : 45px;
   opacity: 0;
       cursor: pointer;
+        -webkit-transition: opacity 200ms ease;
+  -moz-transition: opacity 200ms ease;
+  -o-transition: opacity 200ms ease;
+  transition: opacity 200ms ease;
 }
-
+.sales-badge:hover{
+  opacity: 1!important;
+      -webkit-transition: opacity 450ms ease;
+  -moz-transition: opacity 450ms ease;
+  -o-transition: opacity 450ms ease;
+  transition: opacity 450ms ease;
+}
 .sales-arrow
 {
   opacity: 0;
@@ -765,11 +859,13 @@ mask-image: url(arrowhead-img.png);
 .tooltip{  font-size: 12px;
 
 }
+
 .tooltip-inner{
   color:black;
   background-color: white;
-    width: 200px;
-  height: 100px;
+  width: 100px;
+  height: 30px;
+  padding-top: 7px;
 }
 .tooltip-arrow{
 
@@ -799,6 +895,7 @@ opacity: 1;
 position: relative;
 min-height: 475px;
 left: -5em;
+
 /*height: 600px;*/
 
 /*top: -40px;*/
@@ -839,7 +936,10 @@ left: -5em;
 .sales{
   background-color: #FF9801;
 }
-
+.row.info {
+  position: fixed;
+  top: 0;
+}
 
 </style>
 </head>
@@ -852,12 +952,13 @@ left: -5em;
     </div>
 </div> -->
 <div class="container">
-<div class="row">
+<div class="row info">
       <div id="info" class="col-md-6">
         <div id="tab-1" class="tab-content">
           
-          <div class="tab optin">
+          
             <div class="wistia_embed wistia_async_b8b5gp8tg1" style="height:298px;width:530px">&nbsp;</div>
+            <div class="tab optin">
             <img align="left" src="optin-icon.png" class="icon">
             
             <h2>Opt-in</h2> 
@@ -868,8 +969,9 @@ left: -5em;
         </div>
         <div id="tab-2" class="tab-content">
             
-            <div class="tab video">
+            
               <div class="wistia_embed wistia_async_b8b5gp8tg1" style="height:298px;width:530px">&nbsp;</div>
+              <div class="tab video">
               <img align="left" src="video-icon.png" class="icon">
             
             <h2>Video #1</h2>
@@ -878,8 +980,9 @@ left: -5em;
         </div>
         <div id="tab-3" class="tab-content">
                     
-            <div class="tab video">
+            
               <div class="wistia_embed wistia_async_b8b5gp8tg1" style="height:298px;width:530px">&nbsp;</div>
+              <div class="tab video">
             <img align="left" src="video-icon.png" class="icon">
             <h2>Video #2</h2>
             <h3>Keep nurturing your leads.</h3>
@@ -887,8 +990,9 @@ left: -5em;
         </div>
         <div id="tab-4" class="tab-content">
                     
-            <div class="tab video">
+            
               <div class="wistia_embed wistia_async_b8b5gp8tg1" style="height:298px;width:530px">&nbsp;</div>
+              <div class="tab video">
               <img align="left" src="video-icon.png" class="icon">
             <h2>Video #3</h2>
          
@@ -897,8 +1001,9 @@ left: -5em;
         </div>
         <div id="tab-5" class="tab-content">
                     
-            <div class="tab sales">
+            
                     <div class="wistia_embed wistia_async_b8b5gp8tg1" style="height:298px;width:530px">&nbsp;</div>
+                    <div class="tab sales">
               <img align="left" src="buy-icon.png" class="icon">
             <h2>Sales Page</h2>
            
@@ -948,7 +1053,9 @@ left: -5em;
           </div>
       </div>
     </div>
-  <div  id="interactive" class="col-md-6" >
+</div>
+<div class = "row">
+  <div  id="interactive" class="col-md-6 col-md-offset-7" >
        <div class="col-sm-12">
           <ul id="funnel" class="tabs">
            
@@ -1089,10 +1196,10 @@ left: -5em;
                   <!-- <div class="border-5"></div> -->
 
                   <div  class="sales-arrow arrow2 funnel-5"></div>
-                  <div  class="sales-badge circle funnel-5" data-toggle="tooltip" data-placement="right" title="Sales page"></div>
+                  <div id="sales" class="sales-badge circle funnel-5" data-toggle="tooltip" data-placement="right" title="Sales page"></div>
 
 
-                <div   class="shopping-badge circle funnel-6" data-toggle="tooltip" data-placement="right" title="abandonment email"> <p>Send an Shopping cart abandonment email</p></div> 
+                <div id="sales" class="shopping-badge circle funnel-6" data-toggle="tooltip" data-placement="right" title="abandonment email"></div> 
         
                 <div  class="shopping2-arrow arrow3 funnel-6"></div>
                 <div  class="shopping3-arrow arrow3 funnel-6"></div>
@@ -1108,7 +1215,7 @@ left: -5em;
         </div>
     </div>
 
-
+</div>
 </div>
 </div> 
 
