@@ -389,7 +389,7 @@ background-image: url(abandon.png);
   position : relative;
 /*  left : 96px;*/
 /*  top : 373px;*/
-  width : 400px;
+  width : 300px;
   height : 100px;
 
 }
@@ -479,7 +479,7 @@ mask-image: url(sales-funnel.png);
   transition: opacity 200ms ease;
 }
 
-.video2-badge:hover{
+.video1-badge:hover{
   opacity: 1 !important;
       -webkit-transition: opacity 450ms ease;
   -moz-transition: opacity 450ms ease;
@@ -576,10 +576,10 @@ mask-image: url(sales-funnel.png);
   background-image : url(thank_you-badge.png);
   background-repeat : no-repeat;
   position : absolute;
-    left: 487px;
-    top: 763px;
-    width: 31px;
-    height: 32px;
+    left: 410px;
+    top: 646px;
+    width: 40px;
+    height: 40px;
   opacity: 0;
       cursor: pointer;
         -webkit-transition: opacity 200ms ease;
@@ -623,16 +623,15 @@ mask-image: url(sales-funnel.png);
 
 .shopping-badge
 {
-  background-image : url(thank_you-badge.png);
+background-image : url(thank_you-badge.png);
   background-repeat : no-repeat;
   position : absolute;
-    left: 410px;
-    top: 646px;
-    width: 45px;
-    height: 45px;
-    opacity: 0;
-    cursor: pointer;
-      -webkit-transition: opacity 200ms ease;
+
+    width: 31px;
+    height: 32px;
+  opacity: 0;
+      cursor: pointer;
+        -webkit-transition: opacity 200ms ease;
   -moz-transition: opacity 200ms ease;
   -o-transition: opacity 200ms ease;
   transition: opacity 200ms ease;
@@ -640,10 +639,7 @@ mask-image: url(sales-funnel.png);
 
 .shopping-badge:hover{
   opacity: 1!important;
-      -webkit-transition: opacity 450ms ease;
-  -moz-transition: opacity 450ms ease;
-  -o-transition: opacity 450ms ease;
-  transition: opacity 450ms ease;
+
 }
 .shopping-badge p
 {
@@ -861,8 +857,8 @@ mask-image: url(arrowhead-img.png);
   color:black;
   background-color: white;
   width: 100px;
-  height: 30px;
-  padding-top: 7px;
+  height: auto;
+  padding: 7px;
 }
 .tooltip-arrow{
 
@@ -1163,21 +1159,21 @@ left: -5em;
                     <!-- <div class="border-1"></div> -->
 
                     <div class="optin-arrow arrow1 funnel-1"></div>
-                    <div class="optin-badge circle funnel-1"  data-toggle="tooltip" data-placement="right" title="Opt-in form"></div>
+                    <div class="optin-badge circle funnel-1"  data-toggle="tooltip" data-placement="right" title="Welcome email"></div>
          
                   <div class="day1-text delay"></div>
                      
                     <!--  <div class="border-2"></div> -->
                 
                     <div class="vid1-arrow arrow2 funnel-2"></div>
-                    <div class="video1-badge circle funnel-2" data-toggle="tooltip" data-placement="right" title="Video 1"></div>
+                    <div class="video1-badge circle funnel-2" data-toggle="tooltip" data-placement="right" title="Video 1 email"></div>
       
                   <div class="day3-text delay" ></div>
 
                   <!-- <div class="border-3"></div> -->
 
                   <div class="vid2-arrow arrow2 funnel-3"></div>
-                  <div class="video2-badge circle funnel-3" data-toggle="tooltip" data-placement="right" title="Video 2"></div>
+                  <div class="video2-badge circle funnel-3" data-toggle="tooltip" data-placement="right" title="Video 2 email"></div>
                
 
                   <div class="day6-text delay"></div>
@@ -1186,26 +1182,23 @@ left: -5em;
 
                   
                   <div  class="vid3-arrow arrow2 funnel-4"></div>
-                  <div  class="video3-badge circle funnel-4" data-toggle="tooltip" data-placement="right" title="Video 3"></div>
+                  <div  class="video3-badge circle funnel-4" data-toggle="tooltip" data-placement="right" title="Video 3 email"></div>
  
                   <div  class="day9-text delay"></div>
 
                   <!-- <div class="border-5"></div> -->
 
                   <div  class="sales-arrow arrow2 funnel-5" ></div>
-                  <div id="sales" class="sales-badge circle funnel-5" data-toggle="tooltip" data-placement="right" title="Sales page"></div>
-
-
-                <div id="sales" class="shopping-badge circle funnel-6" data-toggle="tooltip" data-placement="right" title="abandonment email"></div> 
+                  <div id="sales" class="sales-badge circle funnel-5" data-toggle="tooltip" data-placement="right" title="Sales page email"></div>
                 <div  class="shopping2-arrow arrow3 funnel-6"></div>
                 <div  class="shopping3-arrow arrow3 funnel-6"></div>
                 <div  class="arrow-up arrow3 funnel-6"></div>
 
-
+                <div   class="thank_you-badge circle funnel-6" data-toggle="tooltip" data-placement="right" title="Abandonment email"></div>
                   <div  class="thankyou-arrow arrow1 funnel-6"></div>
 <!--                   <div class="cart-arrow arrow1 funnel-7"></div> -->
-<!--                   <div   class="thank_you-badge circle funnel-7" data-toggle="tooltip" data-placement="right" title="Thank you page"></div>
-              -->
+
+             
           </div>
 
         </div>
@@ -1266,7 +1259,7 @@ $(window).load(function()  {
     $('.funnel-3').velocity({marginTop: "1em", marginBottom: "1em" , opacity: '0.2'}, {duration: 400}, "ease");
     $('.funnel-4').velocity({marginTop: "1em", marginBottom: "1em" , opacity: '0.2'}, {duration: 400}, "ease");
     $('.funnel-5').velocity({marginTop: "1em", marginBottom: "1em" , opacity: '0.2'}, {duration: 400}, "ease");
-    $('.funnel-6').velocity({marginTop: "2em", marginBottom: "0em" , opacity: '0.2'}, {duration: 400}, "ease");
+    $('.funnel-6').velocity({marginTop: "2em", marginBottom: "em" , opacity: '0.2'}, {duration: 400}, "ease");
     $('.funnel-7').velocity({marginTop: "1em", marginBottom: "0" , opacity: '0.2'}, {duration: 400}, "ease");
      $('.abandon-funnel').velocity({ opacity: '0.5'}, {duration: 400}, "ease");
     
