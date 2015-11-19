@@ -23,13 +23,66 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
 <style> 
 
+
+
+    /* Large Devices, Wide Screens */
+    @media only screen and (max-width : 1200px) {
+
+      .col-md-6 {
+    width: 50%;
+}
+
+    }
+
+    /* Medium Devices, Desktops */
+    @media only screen and (max-width : 992px) {
+      .col-md-6 {
+        width: 100%;
+}
+#info{
+  left: 0em!important;
+  margin: 0 auto;
+}
+    }
+
+    /* Small Devices, Tablets */
+    @media only screen and (max-width : 768px) {
+
+      .col-md-6 {
+    width: 100%;
+}
+#info{
+  left: 0em!important;
+  margin: 0 auto;
+}
+
+    }
+
+    /* Extra Small Devices, Phones */ 
+    @media only screen and (max-width : 480px) {
+
+      .col-md-6 {
+    width: 100%;
+}
+
+    }
+
+    /* Custom, iPhone Retina */ 
+    @media only screen and (max-width : 320px) {
+
+      .col-md-6 {
+    width: 100%;
+}
+        
+    }
+
 body {
   font-size: 100%;
   font-family: "Open Sans", sans-serif;
   color: white;
 /*  background-color: rgb(13, 75, 118);*/
-  background-color: #3d93ce;
   display: block;
+    background-color: #3d93ce;
 
 }
 
@@ -40,9 +93,9 @@ a {
 }
 
 img.icon{
-       width: 33px;
-    margin-bottom: 7px;
-    margin-right: 5px;
+   width: 100px;
+    margin-top: 3em;
+
   }
 
 li{
@@ -223,7 +276,14 @@ h3 {
   background-color: #C3C3C3;
 }
 
-
+.funnel-icon{
+  padding-top: 2em;
+  padding-left: 0;
+    margin-left: -1em;
+    margin-right: 2em;
+    margin-top: -3em;
+  width: 75px;
+}
 .optin-funnel
 {
 
@@ -326,7 +386,8 @@ background-color: #F96500;
 mask-image: url(sales-funnel.png);
   position : relative;
 /*  left : 96px;*/
-/*  top : 373px;*/
+  top : 21px;
+
   width : 400px;
   height : 60px;
 /*  margin-top: 5em;*/
@@ -437,7 +498,7 @@ mask-image: url(sales-funnel.png);
   background-repeat : no-repeat;
     position: absolute;
     left: 212px;
-    top: 671px;
+    top: 652px;
     width: 281px;
     height: 62px;
     opacity: 0;
@@ -487,8 +548,8 @@ mask-image: url(sales-funnel.png);
   background-image : url(thank_you-badge.png);
   background-repeat : no-repeat;
   position : absolute;
-    left: 407px;
-    top: 665px;
+    left: 419px;
+    top: 419px;
     width: 200px;
     height: 50px;
     opacity: 0;
@@ -518,7 +579,7 @@ margin-left: 4em;
   background-repeat : no-repeat;
   position : absolute;
   left : 478px;
-  top : 483px;
+  top : 643;
   width : 45px;
   height : 45px;
   opacity: 0;
@@ -578,7 +639,7 @@ background-image: url(arrow_03.png);
     background-repeat: no-repeat;
     position: absolute;
     left: 288px;
-    top: 583px;
+    top: 562px;
     width: 300px;
     height: 400px;
     opacity: 0;
@@ -588,12 +649,12 @@ background-image: url(arrow_03.png);
 
     position: absolute;
     left: 192px;
-    top: 721px;
+    top: 713px;
     opacity: 0;
 }
 .no{
     position: absolute;
-    left: 236px;
+    left: 669px;
     top:692px;
     opacity: 0;
 }
@@ -692,7 +753,6 @@ mask-image: url(arrowhead-img.png);
 #funnel{
   z-index: 1;
   padding-left: 2em;
-  padding-top: 2em;
 }
 
 .tooltip{  font-size: 12px;
@@ -728,9 +788,9 @@ mask-image: url(arrowhead-img.png);
 #info{
 opacity: 1;
 position: relative;
-min-height: 400px;
+min-height: 475px;
+left: -5em;
 /*height: 600px;*/
-height: auto;
 
 /*top: -40px;*/
 
@@ -747,16 +807,27 @@ height: auto;
 .tab{
     padding: 1em;
     min-width: 100%;
+    background: #52BAAC;
 }
-.tab.optin{
+.tab h3{
+  margin-left: 4.3em;
+    margin-top: 0em;
+    width: 80%;
+}
+.tab h2{
+     margin-top: 1.3em;
+    margin-bottom: 0;
+}
+}
+.optin{
   background-color: #52BAAC;
 }
 
-.tab.video{
+.video{
   background-color: #008BBC;
 }
 
-.tab.sales{
+.sales{
   background-color: #FF9801;
 }
 
@@ -775,72 +846,98 @@ height: auto;
 <div class="row">
       <div id="info" class="col-md-6">
         <div id="tab-1" class="tab-content">
-          <div class="wistia_embed wistia_async_b8b5gp8tg1" style="height:298px;width:530px">&nbsp;</div>
+          
           <div class="tab optin">
+            <div class="wistia_embed wistia_async_b8b5gp8tg1" style="height:298px;width:530px">&nbsp;</div>
+            <img align="left" src="optin-icon.png" class="icon">
             
-            <h2><img src="email-icon.png" class="icon">Opt-in</h2>
+            <h2>Opt-in</h2> 
+            <h3>Your prospects have converted</h3>
+            
           </div>
-       
-            <h3>Your prospects have converted!</h3>
-            <p>text insert some info here </p>             
+                  
         </div>
         <div id="tab-2" class="tab-content">
-            <div class="wistia_embed wistia_async_b8b5gp8tg1" style="height:298px;width:530px">&nbsp;</div>
+            
             <div class="tab video">
-              <h2><img src="nurture-icon.png" class="icon">Video #1</h2>
-            </div>
+              <div class="wistia_embed wistia_async_b8b5gp8tg1" style="height:298px;width:530px">&nbsp;</div>
+              <img align="left" src="video-icon.png" class="icon">
+            
+            <h2>Video #1</h2>
             <h3>Start nurturing your leads</h3>
-            <p>text insert some info here </p>
+            </div>
         </div>
         <div id="tab-3" class="tab-content">
-                    <div class="wistia_embed wistia_async_b8b5gp8tg1" style="height:298px;width:530px">&nbsp;</div>
+                    
             <div class="tab video">
-            <h2><img src="nurture-icon.png" class="icon">Video #2</h2>
-          </div>
+              <div class="wistia_embed wistia_async_b8b5gp8tg1" style="height:298px;width:530px">&nbsp;</div>
+            <img align="left" src="video-icon.png" class="icon">
+            <h2>Video #2</h2>
             <h3>Keep nurturing your leads.</h3>
-            <p>text insert some info here </p>
+            </div>
         </div>
         <div id="tab-4" class="tab-content">
-                    <div class="wistia_embed wistia_async_b8b5gp8tg1" style="height:298px;width:530px">&nbsp;</div>
+                    
             <div class="tab video">
-            <h2><img src="nurture-icon.png" class="icon">Video #3</h2>
-          </div>
+              <div class="wistia_embed wistia_async_b8b5gp8tg1" style="height:298px;width:530px">&nbsp;</div>
+              <img align="left" src="video-icon.png" class="icon">
+            <h2>Video #3</h2>
+         
             <h3>Convince them. Show your product in use.</h3>
-            <p>text insert some info here </p>
+             </div>
         </div>
         <div id="tab-5" class="tab-content">
-                    <div class="wistia_embed wistia_async_b8b5gp8tg1" style="height:298px;width:530px">&nbsp;</div>
+                    
             <div class="tab sales">
-            <h2><img src="shop-icon.png" class="icon">Sales Page</h2>
-          </div>
+                    <div class="wistia_embed wistia_async_b8b5gp8tg1" style="height:298px;width:530px">&nbsp;</div>
+              <img align="left" src="buy-icon.png" class="icon">
+            <h2>Sales Page</h2>
+           
+
             <h3>Make a Purchase</h3>
-            <p>text insert some info here </p>
+
+           </div>
+
+    
         </div>
         <div id="tab-6" class="tab-content">
                     <div class="wistia_embed wistia_async_b8b5gp8tg1" style="height:298px;width:530px">&nbsp;</div>
             <div class="tab sales">
-            <h2><img src="shop-icon.png" class="icon">Sales Page</h2>
-          </div>
+              <img align="left" src="sales-icon.png" class="icon">
+            <h2>Sales Page</h2>
+
             <h3>Shopping Cart</h3>
-            <p>text insert some info here </p>
+                      </div>
+
         </div>
         <div id="tab-7" class="tab-content">
                     <div class="wistia_embed wistia_async_b8b5gp8tg1" style="height:298px;width:530px">&nbsp;</div>
             <div class="tab sales">
-            <h2><img src="shop-icon.png" class="icon">Sales Page</h2>
-          </div>
-            <h3>Thank you Page</h3>
-            <p>text insert some info here </p>
-        </div>
-        <div id="start"class="col-sm-8">
-          <div class="bottom-right">
-            <h1>Evergreen Launch Product Funnel</h1>
-            <h3> Welcome to this interactive Product Funnel. Its is here to explain how the funnel works.
-              Feel free to play around with the funnel and have fun. Each part of the funnel has videos
-              explaining each part and how to make it happen with Wishpond!</h3>
-          </div>
+            
+            <img  align="left" src="thanks-icon.png" class="icon">
+            <h2>Post-Purchase</h2>
 
+            <h3>Thank you Page</h3>
+
+
+          </div>
         </div>
+        <div id="start">
+          <div class="col-sm-2 funnel-icon">
+             <img src="funnel-icon.png" class="icon">
+          
+          </div>
+          <div class="col-sm-10">
+          
+             
+              <h1>Evergreen Launch Product Funnel</h1>
+              <h3> Welcome to this interactive Product Funnel. Its is here to explain how the funnel works.
+                Feel free to play around with the funnel and have fun. Each part of the funnel has videos
+                explaining each part and how to make it happen with Wishpond!</h3>
+          
+
+          </div>
+      </div>
     </div>
   <div  id="interactive" class="col-md-6" >
        <div class="col-sm-12">
@@ -944,10 +1041,10 @@ height: auto;
                   <div class="vertical-arrow arrow4"></div>
 
                   <div class="yes arrow3 funnel-6">
-                  <p>yes</p>
+                    <p>yes</p>
                   </div>
                   <div class="no arrow3 funnel-6">
-                  <p>no</p>
+                    <p>no</p>
                   </div>
 
                     <!-- <div class="border-1"></div> -->
@@ -1034,7 +1131,7 @@ $(function () {
       $( ".arrow1" ).velocity("transition.slideLeftIn", {delay: 800, duration: 2000, stagger: 1500});
       $( ".arrow2" ).velocity("transition.slideRightIn", {delay: 800, duration: 2000,stagger: 400});
       $( ".arrow3" ).velocity("transition.slideDownIn", {delay: 2500, duration: 1800});
-      $( ".circle" ).velocity("transition.expandIn", {delay: 800, duration: 1000, stagger: 400});
+      $( ".circle" ).velocity("transition.fadeIn", {delay: 800, duration: 1000, stagger: 400});
       $( ".delay" ).velocity("transition.expandIn", { delay: 800, duration: 1000, stagger: 400});
   
   $('[data-toggle="tooltip"]').tooltip();
@@ -1043,8 +1140,8 @@ $(function () {
   return false;
 });
 
-  $('ul.tabs li').click(function (e) {
-    e.preventDefault();
+  $('ul.tabs li').click(function () {
+
         $('.tab-content').velocity({opacity: "0"}, 10);
 
     var tab_id = $(this).attr('data-tab');
@@ -1061,13 +1158,13 @@ $(function () {
     $('.funnel-3').velocity({marginTop: "1em", marginBottom: "1em" , opacity: '0.2'}, {duration: 400}, "ease");
     $('.funnel-4').velocity({marginTop: "1em", marginBottom: "1em" , opacity: '0.2'}, {duration: 400}, "ease");
     $('.funnel-5').velocity({marginTop: "1em", marginBottom: "1em" , opacity: '0.2'}, {duration: 400}, "ease");
-    $('.funnel-6').velocity({marginTop: "0em", marginBottom: "0em" , opacity: '0.2'}, {duration: 400}, "ease");
-    $('.funnel-7').velocity({marginTop: "0", marginBottom: "0" , opacity: '0.2'}, {duration: 400}, "ease");
+    $('.funnel-6').velocity({marginTop: "2em", marginBottom: "0em" , opacity: '0.2'}, {duration: 400}, "ease");
+    $('.funnel-7').velocity({marginTop: "1em", marginBottom: "0" , opacity: '0.2'}, {duration: 400}, "ease");
      $('.abandon-funnel').velocity({ opacity: '0.5'}, {duration: 400}, "ease");
     
     
     $('ul.tabs li').velocity({marginTop: "1em", marginBottom: "1em", scale: "1"}, {duration: 300}, "ease");
-    // $('ul.tabs li:last-child').velocity({marginTop: "5em", marginBottom: "0", opacity: "0.9", scale: "1"}, {duration: 300}, "ease");
+
 
     $('ul.tabs li').removeClass('current');
     
@@ -1281,12 +1378,12 @@ else if(tab_id == 5){
 
 $(".funnel-5").velocity({opacity: '1'}, {duration: 500}, "ease");
 
-    $(this).velocity({marginTop: "2em", marginBottom: "2em", opacity: '1', scale: "1.1"}, {duration: 500}, "ease");
+    $(this).velocity({marginTop: "2em", marginBottom: "2em", opacity: '1'}, {duration: 500}, "ease");
     $(".shopping2-arrow").velocity("transition.slideDownIn", {delay: 300});
      $('.abandon-funnel').velocity({ opacity: '1'}, {delay: 300, duration: 400}, "ease");
     
     $(".no").velocity("transition.slideDownIn", {delay: 300});
-    $('.funnel-' + 6 + ".circle").velocity({scale: "1.1", opacity: '1'}, {delay: 400, duration: 400}, "ease");
+    $('.funnel-' + 6 + ".circle").velocity({opacity: '1'}, {delay: 400, duration: 400}, "ease");
     $(".thankyou-arrow").velocity("transition.slideLeftIn", {delay: 500});
     $(".arrow-up").velocity("transition.slideUpIn", {delay: 700});
     // $(".abandon-funnel").velocity("callout.bounce", {delay: 800});
@@ -1304,21 +1401,20 @@ $(".funnel-5").velocity({opacity: '1'}, {duration: 500}, "ease");
    
     }
 
+else if(tab_id == 7){
 
-    else if(tab_id == 7){
+    $('.funnel-' + 6 + ".arrow2").velocity({marginTop: "0"}, {duration: 400}, "ease");
+    $('.abandon-funnel').velocity({ opacity: '1'}, {duration: 400}, "ease");
+    $('.arrow-up').velocity({marginTop: "0em"}, {duration: 400}, "ease");
+    $('.funnel-' + 6 + ".arrow1").velocity({marginTop: "0em"}, {duration: 400}, "ease");
+    $('.funnel-' + 6 + ".circle").velocity({marginTop: "0em"}, {duration: 400}, "ease");
+    $('.funnel-' + 6 + ".no").velocity({marginTop: "0em"}, {duration: 400}, "ease");
+    $(".funnel-5").velocity({opacity: '1'}, {duration: 500}, "ease");
+    $(".shopping2-arrow").velocity("transition.slideDownIn", {delay: 300});
+    $(".shopping3-arrow").velocity("transition.slideDownIn", {delay: 400});
+    $(".yes").velocity("transition.slideDownIn", {delay: 400});
 
-$('.funnel-' + 6 + ".arrow2").velocity({marginTop: "0"}, {duration: 400}, "ease");
-$('.abandon-funnel').velocity({ opacity: '1'}, {duration: 400}, "ease");
-$('.arrow-up').velocity({marginTop: "0em"}, {duration: 400}, "ease");
-$('.funnel-' + 6 + ".arrow1").velocity({marginTop: "0em"}, {duration: 400}, "ease");
-$('.funnel-' + 6 + ".circle").velocity({marginTop: "0em"}, {duration: 400}, "ease");
-$('.funnel-' + 6 + ".no").velocity({marginTop: "0em"}, {duration: 400}, "ease");
-$(".funnel-5").velocity({opacity: '1'}, {duration: 500}, "ease");
-$(".shopping2-arrow").velocity("transition.slideDownIn", {delay: 300});
-$(".shopping3-arrow").velocity("transition.slideDownIn", {delay: 400});
-$(".yes").velocity("transition.slideDownIn", {delay: 400});
-
-$(this).velocity({marginTop: "4em", marginBottom: "2em", opacity: '1', scale: "1.1"}, {duration: 500}, "ease");
+$(this).velocity({marginTop: "2em", marginBottom: "2em", opacity: '1', scale: "1.1"}, {duration: 500}, "ease");
 
 
     }
