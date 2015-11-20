@@ -379,31 +379,14 @@ mask-image: url(sales-funnel.png);
 
 }
 
-.abandon-funnel
-{
-  pointer-events: none;
-/*background-color: #E4E4E4;*/
-opacity: 1;
-background-image: url(abandon.png);
-/*mask-image: url(abandon.png);*/
-  position : relative;
-/*  left : 96px;*/
-/*  top : 373px;*/
-  width : 300px;
-  height : 100px;
-
-}
 
 .thankyou-funnel
 {
 background-color: #F96500;
 
 -webkit-mask-image: url(thankyou.png);
-mask-image: url(sales-funnel.png);
+mask-image: url(thankyou.png);
   position : relative;
-/*  left : 96px;*/
-  top : 21px;
-
   width : 400px;
   height : 60px;
 /*  margin-top: 5em;*/
@@ -562,8 +545,8 @@ mask-image: url(sales-funnel.png);
   background-image : url(thankyou-arrow.png);
   background-repeat : no-repeat;
     position: absolute;
-    left: 212px;
-    top: 652px;
+    left: 238px;
+    top: 572px;
     width: 281px;
     height: 62px;
     opacity: 0;
@@ -576,8 +559,8 @@ mask-image: url(sales-funnel.png);
   background-image : url(thank_you-badge.png);
   background-repeat : no-repeat;
   position : absolute;
-    left: 410px;
-    top: 646px;
+      left: 431px;
+    top: 558px;
     width: 40px;
     height: 40px;
   opacity: 0;
@@ -715,7 +698,7 @@ background-image: url(arrow_03.png);
     left: 174px;
     top: 493px;
     width: 80px;
-    height: 133px;
+    height: 99px;
     opacity: 0;
 }
 .shopping3-arrow{
@@ -724,7 +707,7 @@ background-image: url(arrow_03.png);
     background-repeat: no-repeat;
     position: absolute;
     left: 165px;
-    top: 683px;
+    top: 580px;
     width: 80px;
     height: 80px;
     opacity: 0;
@@ -735,24 +718,17 @@ background-image: url(arrow_03.png);
     background-image: url(arrow-up.png);
     background-repeat: no-repeat;
     position: absolute;
-    left: 288px;
-    top: 562px;
-    width: 300px;
-    height: 400px;
+    left: 264px;
+  top: 555px;
+    width: 171px;
+    height: 50px;
     opacity: 0;
 }
 
-.yes{
-
-    position: absolute;
-    left: 192px;
-    top: 713px;
-    opacity: 0;
-}
 .no{
     position: absolute;
-    left: 240px;
-    top:675px;
+    left: 325px;
+    top:589px;
     opacity: 0;
 }
 /*TIME DELAY TEXT */
@@ -1122,15 +1098,6 @@ left: -5em;
                     <span>Opt-In through ads</span>
                 </div>
               </div>
-            
-                <li class="abandon-funnel">
-                  <div class="cube 5">
-                    <div class="default-state smaller">
-                        <p>Have they<br>converted?</p>
-          <!--               <img src="shop-icon.png" class="icon"> -->
-                    </div>
-                  </div>
-                </li>
             </li>
             <li class="tab-link thankyou-funnel" data-tab="7">
               <div class="cube 5 flip-to-top">
@@ -1148,37 +1115,27 @@ left: -5em;
 
                   <div class="vertical-line arrow4"></div>
                   <div class="vertical-arrow arrow4"></div>
-
-                  <div class="yes arrow3 funnel-6">
-                    <p>yes</p>
-                  </div>
                   <div class="no arrow3 funnel-6">
-                    <p>Abandoned shopping cart</p>
+                    <p>Abandoned cart</p>
                   </div>
-
-                    <!-- <div class="border-1"></div> -->
 
                     <div class="optin-arrow arrow1 funnel-1"></div>
                     <div class="optin-badge circle funnel-1"  data-toggle="tooltip" data-placement="right" title="Welcome email"></div>
          
                   <div class="day1-text delay"></div>
-                     
-                    <!--  <div class="border-2"></div> -->
+        
                 
                     <div class="vid1-arrow arrow2 funnel-2"></div>
                     <div class="video1-badge circle funnel-2" data-toggle="tooltip" data-placement="right" title="Video 1 email"></div>
       
                   <div class="day3-text delay" ></div>
 
-                  <!-- <div class="border-3"></div> -->
-
+ 
                   <div class="vid2-arrow arrow2 funnel-3"></div>
                   <div class="video2-badge circle funnel-3" data-toggle="tooltip" data-placement="right" title="Video 2 email"></div>
                
 
                   <div class="day6-text delay"></div>
-                  
-                  <!-- <div class="border-4"></div> -->
 
                   
                   <div  class="vid3-arrow arrow2 funnel-4"></div>
@@ -1186,17 +1143,14 @@ left: -5em;
  
                   <div  class="day9-text delay"></div>
 
-                  <!-- <div class="border-5"></div> -->
-
                   <div  class="sales-arrow arrow2 funnel-5" ></div>
                   <div id="sales" class="sales-badge circle funnel-5" data-toggle="tooltip" data-placement="right" title="Sales page email"></div>
                 <div  class="shopping2-arrow arrow3 funnel-6"></div>
                 <div  class="shopping3-arrow arrow3 funnel-6"></div>
-                <div  class="arrow-up arrow3 funnel-6"></div>
+                <div  class="arrow-up arrow2 funnel-6"></div>
 
                 <div   class="thank_you-badge circle funnel-6" data-toggle="tooltip" data-placement="right" title="Abandonment email"></div>
                   <div  class="thankyou-arrow arrow1 funnel-6"></div>
-<!--                   <div class="cart-arrow arrow1 funnel-7"></div> -->
 
              
           </div>
@@ -1259,7 +1213,7 @@ $(window).load(function()  {
     $('.funnel-3').velocity({marginTop: "1em", marginBottom: "1em" , opacity: '0.2'}, {duration: 400}, "ease");
     $('.funnel-4').velocity({marginTop: "1em", marginBottom: "1em" , opacity: '0.2'}, {duration: 400}, "ease");
     $('.funnel-5').velocity({marginTop: "1em", marginBottom: "1em" , opacity: '0.2'}, {duration: 400}, "ease");
-    $('.funnel-6').velocity({marginTop: "2em", marginBottom: "em" , opacity: '0.2'}, {duration: 400}, "ease");
+    $('.funnel-6').velocity({marginTop: "1em", marginBottom: "0em" , opacity: '0.2'}, {duration: 400}, "ease");
     $('.funnel-7').velocity({marginTop: "1em", marginBottom: "0" , opacity: '0.2'}, {duration: 400}, "ease");
      $('.abandon-funnel').velocity({ opacity: '0.5'}, {duration: 400}, "ease");
     
@@ -1378,15 +1332,15 @@ if(tab_id == 1){
 
     $('.day1-text').velocity({opacity: '1'}, {delay: 250} ,"ease");
 
-    $(".funnel-" + 2 + ".circle").velocity({opacity: '1'}, {delay: 450, duration: 500}, "ease");
+    $(".funnel-" + 2 + ".circle").velocity({opacity: '1'}, {delay: 300, duration: 500}, "ease");
       
 
-    $('.day3-text').velocity({opacity: '1'}, {delay: 600, duration: 500}, "ease");
+    $('.day3-text').velocity({opacity: '1'}, {delay: 600, duration: 400}, "ease");
 
 
-    $(".funnel-" + 3 + ".circle").velocity({opacity: '1'}, { delay: 750, duration: 500}, "ease");
+    $(".funnel-" + 3 + ".circle").velocity({opacity: '1'}, { delay: 650, duration: 500}, "ease");
     
-    $('.day6-text').velocity({opacity: '1'}, {delay: 1000, duration: 500}, "ease");
+    $('.day6-text').velocity({opacity: '1'}, {delay: 800, duration: 500}, "ease");
 
     
 
@@ -1476,20 +1430,19 @@ else if(tab_id == 5){
 
     $(this).velocity({marginTop: "2em", marginBottom: "2em", opacity: '1'}, {duration: 500});
     $(".shopping2-arrow").velocity("transition.slideDownIn", {delay: 300});
-     $('.abandon-funnel').velocity({ opacity: '1'}, {delay: 300, duration: 400}, "ease");
     
-    $(".no").velocity("transition.slideDownIn", {delay: 300});
+    $(".no").velocity("transition.slideLeftIn", {delay: 300});
     $('.funnel-' + 6 + ".circle").velocity({opacity: '1'}, {delay: 400, duration: 400}, "ease");
     $(".thankyou-arrow").velocity("transition.slideLeftIn", {delay: 500});
-    $(".arrow-up").velocity("transition.slideUpIn", {delay: 700});
-    // $(".abandon-funnel").velocity("callout.bounce", {delay: 800});
+    $(".arrow-up").velocity("transition.slideRightIn", {delay: 700});
+
     $(".shopping3-arrow").velocity("transition.slideDownIn", {delay: 800});
-    $(".yes").velocity("transition.slideDownIn", {delay: 800});
+
 
         $('.funnel-7').velocity({marginTop: "2em"}, {duration: 400}, "ease");
    
 }else if(tab_id == 7){
-  $(this).velocity({marginTop: "4em", marginBottom: "2em", opacity: '1', scale: "1.1"}, "ease");
+  $(this).velocity({marginTop: "2em", marginBottom: "2em", opacity: '1', scale: "1.1"}, "ease");
 
     $('.funnel-' + 6 + ".arrow2").velocity({marginTop: "0"}, {duration: 400}, "ease");
     $('.abandon-funnel').velocity({ opacity: '1'}, {duration: 400}, "ease");
